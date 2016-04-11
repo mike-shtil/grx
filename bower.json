@@ -3,20 +3,20 @@
   "authors": [
     "mike-shtil <mike002@gmail.com>"
   ],
-  "description": "flexible box grid",
-  "main": "",
+  "version": "0.9",
+  "description": "a friendly flexible box layout grid (alpha!)",
+  "main": "dist/grd.css",
   "moduleType": [
     "node"
   ],
   "license": "MIT",
-  "homepage": "",
-  "private": true,
+  "homepage": "https://github.com/mike-shtil/grd",
   "ignore": [
-    "**/.*",
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    ".gitignore"
   ],
   "dependencies": {
   }

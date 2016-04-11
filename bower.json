@@ -1,0 +1,23 @@
+{
+  "name": "grd",
+  "authors": [
+    "mike-shtil <mike002@gmail.com>"
+  ],
+  "description": "flexible box grid",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}

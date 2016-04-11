@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>grd - flex grid docs</title>
+
+  <link rel="stylesheet" href="css/grd.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body>
+
+  <section class="main container">
+
+    <h1>grd</h1>
+
+    <h3>Welcome to grd &mdash; a flexbox-based layout system.</h3>
+
+    <p>Similar to Bootstrap, the we create rows which contain one or more columns.</p>
+
+    <div class="grd-row">
+      <code>&lt;div class="grd-row"&gt;</code>
+      <div class="grd-col-4-12">
+        <code>&lt;div class="grd-col-4-12"&gt;</code>
+      </div>
+      <div class="grd-col-8-12">
+        <code>&lt;div class="grd-col-8-12"&gt;</code>
+      </div>
+    </div>
+
+    <p>But why stop at 12-based grid... use any base!</p>
+
+    <div class="grd-row">
+      <code>&lt;div class="grd-row"&gt;</code>
+      <div class="grd-col-3-5">
+        <code>&lt;div class="grd-col-3-5"&gt;</code>
+      </div>
+      <div class="grd-col-2-5">
+        <code>&lt;div class="grd-col-2-5"&gt;</code>
+      </div>
+    </div>
+
+    <p>Mix and match bases!</p>
+
+    <div class="grd-row">
+      <code>&lt;div class="grd-row"&gt;</code>
+      <div class="grd-col-1-4">
+        <code>&lt;div class="grd-col-1-4"&gt;</code>
+      </div>
+      <div class="grd-col-2-8">
+        <code>&lt;div class="grd-col-2-8"&gt;</code>
+      </div>
+      <div class="grd-col-1-2">
+        <code>&lt;div class="grd-col-1-2"&gt;</code>
+      </div>
+    </div>
+
+    <p>The widths don't have to add-up to 100%.</p>
+
+    <div class="grd-row">
+      <code>&lt;div class="grd-row"&gt;</code>
+      <div class="grd-col-1-3">
+        <code>&lt;div class="grd-col-1-3"&gt;</code>
+      </div>
+      <div class="grd-col-1-3">
+        <code>&lt;div class="grd-col-1-3"&gt;</code>
+      </div>
+    </div>
+
+    <div class="grd-row grd-gutter-md">
+      <code>&lt;div class="grd-row"&gt;</code>
+      <div class="grd-col-1-3">
+        <code>&lt;div class="grd-col-1-3"&gt;</code>
+      </div>
+      <div class="grd-col-1-3">
+        <code>&lt;div class="grd-col-1-3"&gt;</code>
+      </div>
+      <div class="grd-col-1-3">
+        <code>&lt;div class="grd-col-1-3"&gt;</code>
+      </div>
+      <div class="grd-col-1-3">
+        <code>&lt;div class="grd-col-1-3"&gt;</code>
+      </div>
+    </div>
+
+    <p>Perhaps we want columns to take up just as much width as their content need</p>
+
+    <div class="grd-row">
+      <code>&lt;div class="grd-row"&gt;</code>
+      <div class="grd-col-inline">
+        <code>&lt;div class="grd-col-inline"&gt;</code>
+      </div>
+      <div class="grd-col-inline">
+        <code>&lt;div class="grd-col-inline"&gt;</code>
+      </div>
+      <div class="grd-col-inline">
+        <code>&lt;div class="grd-col-inline"&gt;</code>
+      </div>
+    </div>
+
+    <p>This is so useful, a shorter syntax exists:</p>
+
+    <div class="grd-row-inline">
+      <code>&lt;div class="grd-row"&gt;</code>
+      <div>
+        <code>&lt;div&gt;</code>
+      </div>
+      <div>
+        <code>&lt;div&gt;</code>
+      </div>
+      <div>
+        <code>&lt;div&gt;</code>
+      </div>
+    </div>
+
+    <div class="grd-row-inline">
+      <code>&lt;div class="grd-row"&gt;</code>
+      <input type="text" />
+        <code>&lt;input type="text"&gt;</code>
+      <button>
+        <code>&lt;button&gt;</code>
+      </button>
+      <div>
+        <code>&lt;div&gt;</code>
+      </div>
+    </div>
+
+    <p>Some cells can dynamically take up the remaining width</p>
+
+    <div class="grd-row">
+      <code>&lt;div class="grd-row"&gt;</code>
+      <div class="grd-col-inline">
+        <code>&lt;div class="grd-col-inline"&gt;</code>
+      </div>
+      <div class="grd-col-inline">
+        <code>&lt;div class="grd-col-inline"&gt;</code>
+      </div>
+      <div class="grd-col-auto">
+        <code>&lt;div class="grd-col-auto"&gt;</code>
+      </div>
+    </div>
+
+    <div class="grd-row">
+      <code>&lt;div class="grd-row"&gt;</code>
+      <div class="grd-col-2-6">
+        <code>&lt;div class="grd-col-2-6"&gt;</code>
+      </div>
+      <div class="grd-col-auto">
+        <code>&lt;div class="grd-col-auto"&gt;</code>
+      </div>
+      <div class="grd-col-1-6">
+        <code>&lt;div class="grd-col-1-6"&gt;</code>
+      </div>
+    </div>
+
+    <p>Multiple grd-col-auto share the remaining width equally<small>As long as they don't overflow</small></p>
+
+    <div class="grd-row">
+      <code>&lt;div class="grd-row"&gt;</code>
+      <div class="grd-col-2-6">
+        <code>&lt;div class="grd-col-2-6"&gt;</code>
+      </div>
+      <div class="grd-col-auto">
+        <code>&lt;div class="grd-col-auto"&gt;</code>
+      </div>
+      <div class="grd-col-auto">
+        <code>&lt;div class="grd-col-auto"&gt;</code>
+      </div>
+      <div class="grd-col-1-6">
+        <code>&lt;div class="grd-col-1-6"&gt;</code>
+      </div>
+    </div>
+
+    <p>Maybe you want to pull the last columns to the end<small>Only the first pulled colum needs the grd-pull- class</small></p>
+
+    <div class="grd-row">
+      <code>&lt;div class="grd-row"&gt;</code>
+      <div class="grd-col-1-3">
+        <code>&lt;div class="grd-col-1-3"&gt;</code>
+      </div>
+      <div class="grd-col-1-3 grd-pull-right">
+        <code>&lt;div class="grd-col-1-3 grd-pull-right"&gt;</code>
+      </div>
+    </div>
+
+    <div class="grd-row">
+      <code>&lt;div class="grd-row"&gt;</code>
+      <div class="grd-col-1-5">
+        <code>&lt;div class="grd-col-1-5"&gt;</code>
+      </div>
+      <div class="grd-col-1-5 grd-pull-right">
+        <code>&lt;div class="grd-col-1-5 grd-pull-right"&gt;</code>
+      </div>
+      <div class="grd-col-1-5">
+        <code>&lt;div class="grd-col-1-5"&gt;</code>
+      </div>
+      <div class="grd-col-1-5">
+        <code>&lt;div class="grd-col-1-5"&gt;</code>
+      </div>
+    </div>
+
+  <p>Now the real beauty of flexbox - dynamic content vertical alignment!</p>
+
+  <div class="grd-row">
+    <code>&lt;div class="grd-row"&gt;</code>
+    <div class="grd-col-1-4 grd-align-center">
+      <code>&lt;div class="grd-col-1-4 grd-align-center"&gt;</code>
+    </div>
+    <div class="grd-col-3-4 grd-align-center">
+      <code>&lt;div class="grd-col-3-4 grd-align-center"&gt;</code>
+    </div>
+  </div>
+
+  <div class="grd-row">
+    <code>&lt;div class="grd-row"&gt;</code>
+    <div class="grd-col-1-4 grd-align-end">
+      <code>&lt;div class="grd-col-1-4 grd-align-end"&gt;</code>
+    </div>
+    <div class="grd-col-3-4 grd-align-end">
+      <code>&lt;div class="grd-col-3-4 grd-align-end"&gt;</code>
+    </div>
+  </div>
+
+
+  </section>
+
+</body>
+
+</html>

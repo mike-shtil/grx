@@ -3,18 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "dependencies": {
-    "gulp-plumber": "^1.1.0",
-    "gulp-autoprefixer": "^3.1.0",
+  "dependencies": {},
+  "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-dest": "^0.2.3",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-plumber": "^1.1.0",
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-watch": "^4.3.5",
-    "node-sass": "^3.4.2",
-    "gulp-load-plugins": "*",
-    "gulp-dest": "*"
+    "gulp-watch": "^4.3.5"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -1,0 +1,155 @@
+//////////////////////
+//Pylon
+//////////////////////
+//by: Mike Shtilerman
+// mike-is.me
+//////////////////////
+
+////////
+//params
+////////
+
+$py_bases: 1 2 3 4 5 6 8 9 10 12; //grid width fraction denominators to support
+$py_base_default: 12; //default grid base, used when no base is specified
+//params - gutter - vertical and horizontal separating columns (should be >= 0)
+$py_gutters: ( xs: 0.5rem, sm: 1rem, md: 2rem, lg: 4rem, xl: 8rem ); //params - responsive
+$py_breakpoints: ( sm: 768px, md: 992px, lg: 1200px );
+
+$py_row-prefix: pylon;
+$py_col-prefix: py;
+
+/////
+//row
+/////
+
+[class*=#{$py_row-prefix}] {
+    display: flex;
+    align-items: stretch;
+    box-sizing: border-box;
+
+    ////////
+    //gutter
+    ////////
+
+    @each $name, $value in $py_gutters {
+        &[class*=gutter-#{$name}] {
+            margin: -$value/2;
+            > * {
+                padding: $value/2;
+            }
+        }
+    }
+
+    ////////
+    //column
+    ////////
+
+    > * {
+      flex: 1 1 auto;
+    }
+}
+
+//default (max) breakpoint
+@media all and (min-width: 1199px){
+  //default base
+  @for $n from 1 through $py_base_default {
+       .#{$py_col-prefix}-#{$n} {
+           flex-basis: percentage($n / $py_base_default);
+       }
+  }
+
+   //dynamic bases
+  @each $base in $py_bases {
+     @for $n from 1 through $base{
+          .#{$py_col-prefix}-#{$n}-#{$base} {
+              flex-basis: percentage($n / $base);
+          }
+      }
+    }
+}
+
+//dynamic breakpoints
+@each $bpname, $bpvalue in $py_breakpoints {
+  @media all and (min-width: #{$bpvalue}) {
+
+      //default base
+      @for $n from 1 through $py_base_default {
+           .#{$py_col-prefix}-#{$bpname}-#{$n} {
+               flex-basis: percentage($n / $py_base_default);
+           }
+      }
+
+       //dynamic bases
+      @each $base in $py_bases {
+         @for $n from 1 through $base{
+              .#{$py_col-prefix}-#{$bpname}-#{$n}-#{$base} {
+                  flex-basis: percentage($n / $base);
+              }
+          }
+        }
+  }
+}
+
+.#{$py_col-prefix}-auto {
+    //column which takes up entire remaining free space (width) in the row
+    flex: 2 2 auto;
+}
+
+/////////////////
+//general element
+/////////////////
+
+[class*=#{$py_col-prefix}] {
+  //justify (horizontal in row)
+  [class*=justify-start] {
+      justify-content: flex-start;
+      text-align: left;
+  }
+  %justify-center, [class*=justify-center] {
+      justify-content: center;
+      text-align: center;
+  }
+  [class*=justify-end] {
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  //align (vertical in row)
+  [class*=align-start] {
+    display: flex;
+    align-items: flex-start;
+  }
+  %align-center, [class*=align-center] {
+    display: flex;
+    align-items: center;
+  }
+  [class*=align-end] {
+    display: flex;
+    align-items: flex-end;
+  }
+  [class*=stretch] {
+    align-items: stretch;
+  }
+
+  //align and justify
+  [class*=center] {
+    @extend %justify-center;
+    @extend %align-center;
+  }
+
+  [class*=wrap] {
+      flex-wrap: wrap;
+  }
+
+  [class*=pull-end] {
+      margin-left: auto !important;
+  }
+  [class*=pull-start] {
+      margin-right: auto !important;
+  }
+
+  //flip direction to column
+  [class*=dir-column] {
+      flex-direction: column;
+  }
+}

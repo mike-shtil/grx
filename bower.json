@@ -1,16 +1,16 @@
 {
-  "name": "grd",
+  "name": "Pylon",
   "authors": [
-    "mike-shtil <mike002@gmail.com>"
+    "Mike Shtilerman <mike.shtil@gmail.com>"
   ],
   "version": "0.9",
   "description": "a friendly flexible box layout grid (alpha!)",
-  "main": "dist/grd.css",
+  "main": "dist/pylon.css",
   "moduleType": [
     "node"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/mike-shtil/grd",
+  "homepage": "https://github.com/mike-shtil/Pylon",
   "ignore": [
     "node_modules",
     "bower_components",

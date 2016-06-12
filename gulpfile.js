@@ -1,13 +1,12 @@
 var gulp = require('gulp');
-
 var $ = require('gulp-load-plugins')();
 
 //default task
-gulp.task('default', ['demo', 'dist']);
+gulp.task('default', ['demo', 'dist', 'watch']);
 
 //watch Files For Changes
 gulp.task('watch', function() {
-  gulp.watch('**/*.scss', ['sass']);
+  gulp.watch('**/*.scss', ['dist']);
 });
 
 gulp.task('demo', function(){
@@ -19,8 +18,8 @@ gulp.task('demo', function(){
      .pipe($.sourcemaps.init())
      .pipe($.sass({errLogToConsole: true, sourcemap: true, style: 'compact'}))
      .pipe($.autoprefixer({browsers: ['last 1 version', 'iOS 6'], cascade: false}))
-     .pipe($.sourcemaps.write({includeContent: true, sourceRoot: '.'}))
-     //.pipe(cssnano({discardDuplicates: false})) //optional minification
+     .pipe($.sourcemaps.write({includeContent: false, sourceRoot: '.'}))
+     //.pipe($.cssnano({discardDuplicates: false})) //optional minification
      .pipe(gulp.dest('demo/styles'));
 });
 
@@ -34,7 +33,7 @@ gulp.task('dist', function() {
       .pipe($.sourcemaps.init())
       .pipe($.sass({errLogToConsole: true, sourcemap: true, style: 'compact'}))
       .pipe($.autoprefixer({browsers: ['last 1 version', 'iOS 6'], cascade: false}))
-      .pipe($.sourcemaps.write({includeContent: true, sourceRoot: '.'}))
-      //.pipe(cssnano({discardDuplicates: false})) //optional minification
+      .pipe($.sourcemaps.write({includeContent: false, sourceRoot: '.'}))
+      //.pipe($.cssnano({discardDuplicates: false})) //optional minification
       .pipe(gulp.dest('dist'));
 });

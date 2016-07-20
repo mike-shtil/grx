@@ -11,6 +11,7 @@
     "gulp-dest": "^0.2.3",
     "gulp-load-plugins": "^1.2.4",
     "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.2.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-watch": "^4.3.5"

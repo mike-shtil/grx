@@ -6,11 +6,11 @@ gulp.task('default', ['demo', 'dist', 'watch']);
 
 //watch Files For Changes
 gulp.task('watch', function() {
-  gulp.watch('**/*.scss', ['dist']);
+  return gulp.watch('**/*.scss', ['dist']);
 });
 
 gulp.task('demo', function(){
-  gulp.src('demo/styles/**/*.scss')
+  return gulp.src('demo/styles/**/*.scss')
      .pipe($.plumber({errorHandler: function(error){
         console.log(error);
         this.emit('end');
@@ -25,7 +25,7 @@ gulp.task('demo', function(){
 
 //SASS build process
 gulp.task('dist', function() {
-   gulp.src('src/**/*.scss')
+   return gulp.src('src/**/*.scss')
       .pipe($.plumber({errorHandler: function(error){
          console.log(error);
          this.emit('end');
@@ -34,6 +34,8 @@ gulp.task('dist', function() {
       .pipe($.sass({errLogToConsole: true, sourcemap: true, style: 'compact'}))
       .pipe($.autoprefixer({browsers: ['last 1 version', 'iOS 6'], cascade: false}))
       .pipe($.sourcemaps.write({includeContent: false, sourceRoot: '.'}))
-      //.pipe($.cssnano({discardDuplicates: false})) //optional minification
+      .pipe(gulp.dest('dist'))
+      .pipe($.cssnano({discardDuplicates: false})) //optional minification
+      .pipe($.rename({suffix: '.min'}))
       .pipe(gulp.dest('dist'));
 });

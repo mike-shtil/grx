@@ -34,8 +34,9 @@ gulp.task('dist', function() {
       .pipe($.sass({errLogToConsole: true, sourcemap: true, style: 'compact'}))
       .pipe($.autoprefixer({browsers: ['last 1 version', 'iOS 6'], cascade: false}))
       .pipe($.sourcemaps.write({includeContent: false, sourceRoot: '.'}))
+      .pipe($.clean())
       .pipe(gulp.dest('dist'))
-      .pipe($.cssnano({discardDuplicates: false})) //optional minification
+      .pipe($.cssnano({discardDuplicates: false, discardComments: true, sourcemap: false}))
       .pipe($.rename({suffix: '.min'}))
       .pipe(gulp.dest('dist'))
       .pipe($.gzip())

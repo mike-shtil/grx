@@ -37,5 +37,7 @@ gulp.task('dist', function() {
       .pipe(gulp.dest('dist'))
       .pipe($.cssnano({discardDuplicates: false})) //optional minification
       .pipe($.rename({suffix: '.min'}))
+      .pipe(gulp.dest('dist'))
+      .pipe($.gzip())
       .pipe(gulp.dest('dist'));
 });

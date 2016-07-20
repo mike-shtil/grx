@@ -30,10 +30,10 @@ gulp.task('dist', function() {
          console.log(error);
          this.emit('end');
       }}))
-      .pipe($.sourcemaps.init())
+      //.pipe($.sourcemaps.init())
       .pipe($.sass({errLogToConsole: true, sourcemap: true, style: 'compact'}))
       .pipe($.autoprefixer({browsers: ['last 1 version', 'iOS 6'], cascade: false}))
-      .pipe($.sourcemaps.write({includeContent: false, sourceRoot: '.'}))
+      //.pipe($.sourcemaps.write({includeContent: false, sourceRoot: '.'}))
       .pipe($.clean())
       .pipe(gulp.dest('dist'))
       .pipe($.cssnano({discardDuplicates: false, discardComments: true, sourcemap: false}))

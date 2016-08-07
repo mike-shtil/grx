@@ -5,698 +5,786 @@
 * mike-is.me
 * distributed under MIT license
 */
-[class*=pylon] {
+[class*=row] {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: stretch;
   align-items: stretch;
   box-sizing: border-box; }
-  [class*=pylon][class*=gutter-xs] {
+  [class*=row][class*=gutter-xs] {
     margin: -0.25rem; }
-    [class*=pylon][class*=gutter-xs] > * {
+    [class*=row][class*=gutter-xs] > * {
       padding: 0.25rem; }
-  [class*=pylon][class*=gutter-sm] {
+  [class*=row][class*=gutter-sm] {
     margin: -0.5rem; }
-    [class*=pylon][class*=gutter-sm] > * {
+    [class*=row][class*=gutter-sm] > * {
       padding: 0.5rem; }
-  [class*=pylon][class*=gutter-md] {
+  [class*=row][class*=gutter-md] {
     margin: -1rem; }
-    [class*=pylon][class*=gutter-md] > * {
+    [class*=row][class*=gutter-md] > * {
       padding: 1rem; }
-  [class*=pylon][class*=gutter-lg] {
+  [class*=row][class*=gutter-lg] {
     margin: -2rem; }
-    [class*=pylon][class*=gutter-lg] > * {
+    [class*=row][class*=gutter-lg] > * {
       padding: 2rem; }
-  [class*=pylon][class*=gutter-xl] {
+  [class*=row][class*=gutter-xl] {
     margin: -4rem; }
-    [class*=pylon][class*=gutter-xl] > * {
+    [class*=row][class*=gutter-xl] > * {
       padding: 4rem; }
 
-[class*=pylon] > [class*=py] {
-  -webkit-box-flex: 0;
-  flex-grow: 0;
-  flex-shrink: 0;
+[class*=row] > [class*=col] {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
   box-sizing: border-box; }
 
 @media all and (min-width: 0) {
-  > [class*=pylon] .py-1 {
+  [class*=row] > .col-1 {
     flex-basis: 8.33333%; }
-  > [class*=pylon] .py-2 {
+  [class*=row] > .col-2 {
     flex-basis: 16.66667%; }
-  > [class*=pylon] .py-3 {
+  [class*=row] > .col-3 {
     flex-basis: 25%; }
-  > [class*=pylon] .py-4 {
+  [class*=row] > .col-4 {
     flex-basis: 33.33333%; }
-  > [class*=pylon] .py-5 {
+  [class*=row] > .col-5 {
     flex-basis: 41.66667%; }
-  > [class*=pylon] .py-6 {
+  [class*=row] > .col-6 {
     flex-basis: 50%; }
-  > [class*=pylon] .py-7 {
+  [class*=row] > .col-7 {
     flex-basis: 58.33333%; }
-  > [class*=pylon] .py-8 {
+  [class*=row] > .col-8 {
     flex-basis: 66.66667%; }
-  > [class*=pylon] .py-9 {
+  [class*=row] > .col-9 {
     flex-basis: 75%; }
-  > [class*=pylon] .py-10 {
+  [class*=row] > .col-10 {
     flex-basis: 83.33333%; }
-  > [class*=pylon] .py-11 {
+  [class*=row] > .col-11 {
     flex-basis: 91.66667%; }
-  > [class*=pylon] .py-12 {
+  [class*=row] > .col-12 {
     flex-basis: 100%; }
-  > [class*=pylon] > .py-1-1 {
+  [class*=row] > .col-1-1 {
     flex-basis: 100%; }
-  > [class*=pylon] > .py-1-2 {
+  [class*=row] > .col-1-2 {
     flex-basis: 50%; }
-  > [class*=pylon] > .py-2-2 {
+  [class*=row] > .col-2-2 {
     flex-basis: 100%; }
-  > [class*=pylon] > .py-1-3 {
+  [class*=row] > .col-1-3 {
     flex-basis: 33.33333%; }
-  > [class*=pylon] > .py-2-3 {
+  [class*=row] > .col-2-3 {
     flex-basis: 66.66667%; }
-  > [class*=pylon] > .py-3-3 {
+  [class*=row] > .col-3-3 {
     flex-basis: 100%; }
-  > [class*=pylon] > .py-1-4 {
+  [class*=row] > .col-1-4 {
     flex-basis: 25%; }
-  > [class*=pylon] > .py-2-4 {
+  [class*=row] > .col-2-4 {
     flex-basis: 50%; }
-  > [class*=pylon] > .py-3-4 {
+  [class*=row] > .col-3-4 {
     flex-basis: 75%; }
-  > [class*=pylon] > .py-4-4 {
+  [class*=row] > .col-4-4 {
     flex-basis: 100%; }
-  > [class*=pylon] > .py-1-5 {
+  [class*=row] > .col-1-5 {
     flex-basis: 20%; }
-  > [class*=pylon] > .py-2-5 {
+  [class*=row] > .col-2-5 {
     flex-basis: 40%; }
-  > [class*=pylon] > .py-3-5 {
+  [class*=row] > .col-3-5 {
     flex-basis: 60%; }
-  > [class*=pylon] > .py-4-5 {
+  [class*=row] > .col-4-5 {
     flex-basis: 80%; }
-  > [class*=pylon] > .py-5-5 {
+  [class*=row] > .col-5-5 {
     flex-basis: 100%; }
-  > [class*=pylon] > .py-1-6 {
+  [class*=row] > .col-1-6 {
     flex-basis: 16.66667%; }
-  > [class*=pylon] > .py-2-6 {
+  [class*=row] > .col-2-6 {
     flex-basis: 33.33333%; }
-  > [class*=pylon] > .py-3-6 {
+  [class*=row] > .col-3-6 {
     flex-basis: 50%; }
-  > [class*=pylon] > .py-4-6 {
+  [class*=row] > .col-4-6 {
     flex-basis: 66.66667%; }
-  > [class*=pylon] > .py-5-6 {
+  [class*=row] > .col-5-6 {
     flex-basis: 83.33333%; }
-  > [class*=pylon] > .py-6-6 {
+  [class*=row] > .col-6-6 {
     flex-basis: 100%; }
-  > [class*=pylon] > .py-1-8 {
+  [class*=row] > .col-1-8 {
     flex-basis: 12.5%; }
-  > [class*=pylon] > .py-2-8 {
+  [class*=row] > .col-2-8 {
     flex-basis: 25%; }
-  > [class*=pylon] > .py-3-8 {
+  [class*=row] > .col-3-8 {
     flex-basis: 37.5%; }
-  > [class*=pylon] > .py-4-8 {
+  [class*=row] > .col-4-8 {
     flex-basis: 50%; }
-  > [class*=pylon] > .py-5-8 {
+  [class*=row] > .col-5-8 {
     flex-basis: 62.5%; }
-  > [class*=pylon] > .py-6-8 {
+  [class*=row] > .col-6-8 {
     flex-basis: 75%; }
-  > [class*=pylon] > .py-7-8 {
+  [class*=row] > .col-7-8 {
     flex-basis: 87.5%; }
-  > [class*=pylon] > .py-8-8 {
+  [class*=row] > .col-8-8 {
     flex-basis: 100%; }
-  > [class*=pylon] > .py-1-9 {
+  [class*=row] > .col-1-9 {
     flex-basis: 11.11111%; }
-  > [class*=pylon] > .py-2-9 {
+  [class*=row] > .col-2-9 {
     flex-basis: 22.22222%; }
-  > [class*=pylon] > .py-3-9 {
+  [class*=row] > .col-3-9 {
     flex-basis: 33.33333%; }
-  > [class*=pylon] > .py-4-9 {
+  [class*=row] > .col-4-9 {
     flex-basis: 44.44444%; }
-  > [class*=pylon] > .py-5-9 {
+  [class*=row] > .col-5-9 {
     flex-basis: 55.55556%; }
-  > [class*=pylon] > .py-6-9 {
+  [class*=row] > .col-6-9 {
     flex-basis: 66.66667%; }
-  > [class*=pylon] > .py-7-9 {
+  [class*=row] > .col-7-9 {
     flex-basis: 77.77778%; }
-  > [class*=pylon] > .py-8-9 {
+  [class*=row] > .col-8-9 {
     flex-basis: 88.88889%; }
-  > [class*=pylon] > .py-9-9 {
+  [class*=row] > .col-9-9 {
     flex-basis: 100%; }
-  > [class*=pylon] > .py-1-10 {
+  [class*=row] > .col-1-10 {
     flex-basis: 10%; }
-  > [class*=pylon] > .py-2-10 {
+  [class*=row] > .col-2-10 {
     flex-basis: 20%; }
-  > [class*=pylon] > .py-3-10 {
+  [class*=row] > .col-3-10 {
     flex-basis: 30%; }
-  > [class*=pylon] > .py-4-10 {
+  [class*=row] > .col-4-10 {
     flex-basis: 40%; }
-  > [class*=pylon] > .py-5-10 {
+  [class*=row] > .col-5-10 {
     flex-basis: 50%; }
-  > [class*=pylon] > .py-6-10 {
+  [class*=row] > .col-6-10 {
     flex-basis: 60%; }
-  > [class*=pylon] > .py-7-10 {
+  [class*=row] > .col-7-10 {
     flex-basis: 70%; }
-  > [class*=pylon] > .py-8-10 {
+  [class*=row] > .col-8-10 {
     flex-basis: 80%; }
-  > [class*=pylon] > .py-9-10 {
+  [class*=row] > .col-9-10 {
     flex-basis: 90%; }
-  > [class*=pylon] > .py-10-10 {
+  [class*=row] > .col-10-10 {
     flex-basis: 100%; }
-  > [class*=pylon] > .py-1-12 {
+  [class*=row] > .col-1-11 {
+    flex-basis: 9.09091%; }
+  [class*=row] > .col-2-11 {
+    flex-basis: 18.18182%; }
+  [class*=row] > .col-3-11 {
+    flex-basis: 27.27273%; }
+  [class*=row] > .col-4-11 {
+    flex-basis: 36.36364%; }
+  [class*=row] > .col-5-11 {
+    flex-basis: 45.45455%; }
+  [class*=row] > .col-6-11 {
+    flex-basis: 54.54545%; }
+  [class*=row] > .col-7-11 {
+    flex-basis: 63.63636%; }
+  [class*=row] > .col-8-11 {
+    flex-basis: 72.72727%; }
+  [class*=row] > .col-9-11 {
+    flex-basis: 81.81818%; }
+  [class*=row] > .col-10-11 {
+    flex-basis: 90.90909%; }
+  [class*=row] > .col-11-11 {
+    flex-basis: 100%; }
+  [class*=row] > .col-1-12 {
     flex-basis: 8.33333%; }
-  > [class*=pylon] > .py-2-12 {
+  [class*=row] > .col-2-12 {
     flex-basis: 16.66667%; }
-  > [class*=pylon] > .py-3-12 {
+  [class*=row] > .col-3-12 {
     flex-basis: 25%; }
-  > [class*=pylon] > .py-4-12 {
+  [class*=row] > .col-4-12 {
     flex-basis: 33.33333%; }
-  > [class*=pylon] > .py-5-12 {
+  [class*=row] > .col-5-12 {
     flex-basis: 41.66667%; }
-  > [class*=pylon] > .py-6-12 {
+  [class*=row] > .col-6-12 {
     flex-basis: 50%; }
-  > [class*=pylon] > .py-7-12 {
+  [class*=row] > .col-7-12 {
     flex-basis: 58.33333%; }
-  > [class*=pylon] > .py-8-12 {
+  [class*=row] > .col-8-12 {
     flex-basis: 66.66667%; }
-  > [class*=pylon] > .py-9-12 {
+  [class*=row] > .col-9-12 {
     flex-basis: 75%; }
-  > [class*=pylon] > .py-10-12 {
+  [class*=row] > .col-10-12 {
     flex-basis: 83.33333%; }
-  > [class*=pylon] > .py-11-12 {
+  [class*=row] > .col-11-12 {
     flex-basis: 91.66667%; }
-  > [class*=pylon] > .py-12-12 {
+  [class*=row] > .col-12-12 {
     flex-basis: 100%; } }
 
 @media all and (min-width: 768px) {
-  [class*=pylon] > .py-sm-1 {
+  [class*=row] > .col-sm-1 {
     flex-basis: 8.33333%; }
-  [class*=pylon] > .py-sm-2 {
+  [class*=row] > .col-sm-2 {
     flex-basis: 16.66667%; }
-  [class*=pylon] > .py-sm-3 {
+  [class*=row] > .col-sm-3 {
     flex-basis: 25%; }
-  [class*=pylon] > .py-sm-4 {
+  [class*=row] > .col-sm-4 {
     flex-basis: 33.33333%; }
-  [class*=pylon] > .py-sm-5 {
+  [class*=row] > .col-sm-5 {
     flex-basis: 41.66667%; }
-  [class*=pylon] > .py-sm-6 {
+  [class*=row] > .col-sm-6 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-sm-7 {
+  [class*=row] > .col-sm-7 {
     flex-basis: 58.33333%; }
-  [class*=pylon] > .py-sm-8 {
+  [class*=row] > .col-sm-8 {
     flex-basis: 66.66667%; }
-  [class*=pylon] > .py-sm-9 {
+  [class*=row] > .col-sm-9 {
     flex-basis: 75%; }
-  [class*=pylon] > .py-sm-10 {
+  [class*=row] > .col-sm-10 {
     flex-basis: 83.33333%; }
-  [class*=pylon] > .py-sm-11 {
+  [class*=row] > .col-sm-11 {
     flex-basis: 91.66667%; }
-  [class*=pylon] > .py-sm-12 {
+  [class*=row] > .col-sm-12 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-sm-1-1 {
+  [class*=row] > .col-sm-1-1 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-sm-1-2 {
+  [class*=row] > .col-sm-1-2 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-sm-2-2 {
+  [class*=row] > .col-sm-2-2 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-sm-1-3 {
+  [class*=row] > .col-sm-1-3 {
     flex-basis: 33.33333%; }
-  [class*=pylon] > .py-sm-2-3 {
+  [class*=row] > .col-sm-2-3 {
     flex-basis: 66.66667%; }
-  [class*=pylon] > .py-sm-3-3 {
+  [class*=row] > .col-sm-3-3 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-sm-1-4 {
+  [class*=row] > .col-sm-1-4 {
     flex-basis: 25%; }
-  [class*=pylon] > .py-sm-2-4 {
+  [class*=row] > .col-sm-2-4 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-sm-3-4 {
+  [class*=row] > .col-sm-3-4 {
     flex-basis: 75%; }
-  [class*=pylon] > .py-sm-4-4 {
+  [class*=row] > .col-sm-4-4 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-sm-1-5 {
+  [class*=row] > .col-sm-1-5 {
     flex-basis: 20%; }
-  [class*=pylon] > .py-sm-2-5 {
+  [class*=row] > .col-sm-2-5 {
     flex-basis: 40%; }
-  [class*=pylon] > .py-sm-3-5 {
+  [class*=row] > .col-sm-3-5 {
     flex-basis: 60%; }
-  [class*=pylon] > .py-sm-4-5 {
+  [class*=row] > .col-sm-4-5 {
     flex-basis: 80%; }
-  [class*=pylon] > .py-sm-5-5 {
+  [class*=row] > .col-sm-5-5 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-sm-1-6 {
+  [class*=row] > .col-sm-1-6 {
     flex-basis: 16.66667%; }
-  [class*=pylon] > .py-sm-2-6 {
+  [class*=row] > .col-sm-2-6 {
     flex-basis: 33.33333%; }
-  [class*=pylon] > .py-sm-3-6 {
+  [class*=row] > .col-sm-3-6 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-sm-4-6 {
+  [class*=row] > .col-sm-4-6 {
     flex-basis: 66.66667%; }
-  [class*=pylon] > .py-sm-5-6 {
+  [class*=row] > .col-sm-5-6 {
     flex-basis: 83.33333%; }
-  [class*=pylon] > .py-sm-6-6 {
+  [class*=row] > .col-sm-6-6 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-sm-1-8 {
+  [class*=row] > .col-sm-1-8 {
     flex-basis: 12.5%; }
-  [class*=pylon] > .py-sm-2-8 {
+  [class*=row] > .col-sm-2-8 {
     flex-basis: 25%; }
-  [class*=pylon] > .py-sm-3-8 {
+  [class*=row] > .col-sm-3-8 {
     flex-basis: 37.5%; }
-  [class*=pylon] > .py-sm-4-8 {
+  [class*=row] > .col-sm-4-8 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-sm-5-8 {
+  [class*=row] > .col-sm-5-8 {
     flex-basis: 62.5%; }
-  [class*=pylon] > .py-sm-6-8 {
+  [class*=row] > .col-sm-6-8 {
     flex-basis: 75%; }
-  [class*=pylon] > .py-sm-7-8 {
+  [class*=row] > .col-sm-7-8 {
     flex-basis: 87.5%; }
-  [class*=pylon] > .py-sm-8-8 {
+  [class*=row] > .col-sm-8-8 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-sm-1-9 {
+  [class*=row] > .col-sm-1-9 {
     flex-basis: 11.11111%; }
-  [class*=pylon] > .py-sm-2-9 {
+  [class*=row] > .col-sm-2-9 {
     flex-basis: 22.22222%; }
-  [class*=pylon] > .py-sm-3-9 {
+  [class*=row] > .col-sm-3-9 {
     flex-basis: 33.33333%; }
-  [class*=pylon] > .py-sm-4-9 {
+  [class*=row] > .col-sm-4-9 {
     flex-basis: 44.44444%; }
-  [class*=pylon] > .py-sm-5-9 {
+  [class*=row] > .col-sm-5-9 {
     flex-basis: 55.55556%; }
-  [class*=pylon] > .py-sm-6-9 {
+  [class*=row] > .col-sm-6-9 {
     flex-basis: 66.66667%; }
-  [class*=pylon] > .py-sm-7-9 {
+  [class*=row] > .col-sm-7-9 {
     flex-basis: 77.77778%; }
-  [class*=pylon] > .py-sm-8-9 {
+  [class*=row] > .col-sm-8-9 {
     flex-basis: 88.88889%; }
-  [class*=pylon] > .py-sm-9-9 {
+  [class*=row] > .col-sm-9-9 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-sm-1-10 {
+  [class*=row] > .col-sm-1-10 {
     flex-basis: 10%; }
-  [class*=pylon] > .py-sm-2-10 {
+  [class*=row] > .col-sm-2-10 {
     flex-basis: 20%; }
-  [class*=pylon] > .py-sm-3-10 {
+  [class*=row] > .col-sm-3-10 {
     flex-basis: 30%; }
-  [class*=pylon] > .py-sm-4-10 {
+  [class*=row] > .col-sm-4-10 {
     flex-basis: 40%; }
-  [class*=pylon] > .py-sm-5-10 {
+  [class*=row] > .col-sm-5-10 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-sm-6-10 {
+  [class*=row] > .col-sm-6-10 {
     flex-basis: 60%; }
-  [class*=pylon] > .py-sm-7-10 {
+  [class*=row] > .col-sm-7-10 {
     flex-basis: 70%; }
-  [class*=pylon] > .py-sm-8-10 {
+  [class*=row] > .col-sm-8-10 {
     flex-basis: 80%; }
-  [class*=pylon] > .py-sm-9-10 {
+  [class*=row] > .col-sm-9-10 {
     flex-basis: 90%; }
-  [class*=pylon] > .py-sm-10-10 {
+  [class*=row] > .col-sm-10-10 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-sm-1-12 {
+  [class*=row] > .col-sm-1-11 {
+    flex-basis: 9.09091%; }
+  [class*=row] > .col-sm-2-11 {
+    flex-basis: 18.18182%; }
+  [class*=row] > .col-sm-3-11 {
+    flex-basis: 27.27273%; }
+  [class*=row] > .col-sm-4-11 {
+    flex-basis: 36.36364%; }
+  [class*=row] > .col-sm-5-11 {
+    flex-basis: 45.45455%; }
+  [class*=row] > .col-sm-6-11 {
+    flex-basis: 54.54545%; }
+  [class*=row] > .col-sm-7-11 {
+    flex-basis: 63.63636%; }
+  [class*=row] > .col-sm-8-11 {
+    flex-basis: 72.72727%; }
+  [class*=row] > .col-sm-9-11 {
+    flex-basis: 81.81818%; }
+  [class*=row] > .col-sm-10-11 {
+    flex-basis: 90.90909%; }
+  [class*=row] > .col-sm-11-11 {
+    flex-basis: 100%; }
+  [class*=row] > .col-sm-1-12 {
     flex-basis: 8.33333%; }
-  [class*=pylon] > .py-sm-2-12 {
+  [class*=row] > .col-sm-2-12 {
     flex-basis: 16.66667%; }
-  [class*=pylon] > .py-sm-3-12 {
+  [class*=row] > .col-sm-3-12 {
     flex-basis: 25%; }
-  [class*=pylon] > .py-sm-4-12 {
+  [class*=row] > .col-sm-4-12 {
     flex-basis: 33.33333%; }
-  [class*=pylon] > .py-sm-5-12 {
+  [class*=row] > .col-sm-5-12 {
     flex-basis: 41.66667%; }
-  [class*=pylon] > .py-sm-6-12 {
+  [class*=row] > .col-sm-6-12 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-sm-7-12 {
+  [class*=row] > .col-sm-7-12 {
     flex-basis: 58.33333%; }
-  [class*=pylon] > .py-sm-8-12 {
+  [class*=row] > .col-sm-8-12 {
     flex-basis: 66.66667%; }
-  [class*=pylon] > .py-sm-9-12 {
+  [class*=row] > .col-sm-9-12 {
     flex-basis: 75%; }
-  [class*=pylon] > .py-sm-10-12 {
+  [class*=row] > .col-sm-10-12 {
     flex-basis: 83.33333%; }
-  [class*=pylon] > .py-sm-11-12 {
+  [class*=row] > .col-sm-11-12 {
     flex-basis: 91.66667%; }
-  [class*=pylon] > .py-sm-12-12 {
+  [class*=row] > .col-sm-12-12 {
     flex-basis: 100%; } }
 
 @media all and (min-width: 992px) {
-  [class*=pylon] > .py-md-1 {
+  [class*=row] > .col-md-1 {
     flex-basis: 8.33333%; }
-  [class*=pylon] > .py-md-2 {
+  [class*=row] > .col-md-2 {
     flex-basis: 16.66667%; }
-  [class*=pylon] > .py-md-3 {
+  [class*=row] > .col-md-3 {
     flex-basis: 25%; }
-  [class*=pylon] > .py-md-4 {
+  [class*=row] > .col-md-4 {
     flex-basis: 33.33333%; }
-  [class*=pylon] > .py-md-5 {
+  [class*=row] > .col-md-5 {
     flex-basis: 41.66667%; }
-  [class*=pylon] > .py-md-6 {
+  [class*=row] > .col-md-6 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-md-7 {
+  [class*=row] > .col-md-7 {
     flex-basis: 58.33333%; }
-  [class*=pylon] > .py-md-8 {
+  [class*=row] > .col-md-8 {
     flex-basis: 66.66667%; }
-  [class*=pylon] > .py-md-9 {
+  [class*=row] > .col-md-9 {
     flex-basis: 75%; }
-  [class*=pylon] > .py-md-10 {
+  [class*=row] > .col-md-10 {
     flex-basis: 83.33333%; }
-  [class*=pylon] > .py-md-11 {
+  [class*=row] > .col-md-11 {
     flex-basis: 91.66667%; }
-  [class*=pylon] > .py-md-12 {
+  [class*=row] > .col-md-12 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-md-1-1 {
+  [class*=row] > .col-md-1-1 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-md-1-2 {
+  [class*=row] > .col-md-1-2 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-md-2-2 {
+  [class*=row] > .col-md-2-2 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-md-1-3 {
+  [class*=row] > .col-md-1-3 {
     flex-basis: 33.33333%; }
-  [class*=pylon] > .py-md-2-3 {
+  [class*=row] > .col-md-2-3 {
     flex-basis: 66.66667%; }
-  [class*=pylon] > .py-md-3-3 {
+  [class*=row] > .col-md-3-3 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-md-1-4 {
+  [class*=row] > .col-md-1-4 {
     flex-basis: 25%; }
-  [class*=pylon] > .py-md-2-4 {
+  [class*=row] > .col-md-2-4 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-md-3-4 {
+  [class*=row] > .col-md-3-4 {
     flex-basis: 75%; }
-  [class*=pylon] > .py-md-4-4 {
+  [class*=row] > .col-md-4-4 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-md-1-5 {
+  [class*=row] > .col-md-1-5 {
     flex-basis: 20%; }
-  [class*=pylon] > .py-md-2-5 {
+  [class*=row] > .col-md-2-5 {
     flex-basis: 40%; }
-  [class*=pylon] > .py-md-3-5 {
+  [class*=row] > .col-md-3-5 {
     flex-basis: 60%; }
-  [class*=pylon] > .py-md-4-5 {
+  [class*=row] > .col-md-4-5 {
     flex-basis: 80%; }
-  [class*=pylon] > .py-md-5-5 {
+  [class*=row] > .col-md-5-5 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-md-1-6 {
+  [class*=row] > .col-md-1-6 {
     flex-basis: 16.66667%; }
-  [class*=pylon] > .py-md-2-6 {
+  [class*=row] > .col-md-2-6 {
     flex-basis: 33.33333%; }
-  [class*=pylon] > .py-md-3-6 {
+  [class*=row] > .col-md-3-6 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-md-4-6 {
+  [class*=row] > .col-md-4-6 {
     flex-basis: 66.66667%; }
-  [class*=pylon] > .py-md-5-6 {
+  [class*=row] > .col-md-5-6 {
     flex-basis: 83.33333%; }
-  [class*=pylon] > .py-md-6-6 {
+  [class*=row] > .col-md-6-6 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-md-1-8 {
+  [class*=row] > .col-md-1-8 {
     flex-basis: 12.5%; }
-  [class*=pylon] > .py-md-2-8 {
+  [class*=row] > .col-md-2-8 {
     flex-basis: 25%; }
-  [class*=pylon] > .py-md-3-8 {
+  [class*=row] > .col-md-3-8 {
     flex-basis: 37.5%; }
-  [class*=pylon] > .py-md-4-8 {
+  [class*=row] > .col-md-4-8 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-md-5-8 {
+  [class*=row] > .col-md-5-8 {
     flex-basis: 62.5%; }
-  [class*=pylon] > .py-md-6-8 {
+  [class*=row] > .col-md-6-8 {
     flex-basis: 75%; }
-  [class*=pylon] > .py-md-7-8 {
+  [class*=row] > .col-md-7-8 {
     flex-basis: 87.5%; }
-  [class*=pylon] > .py-md-8-8 {
+  [class*=row] > .col-md-8-8 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-md-1-9 {
+  [class*=row] > .col-md-1-9 {
     flex-basis: 11.11111%; }
-  [class*=pylon] > .py-md-2-9 {
+  [class*=row] > .col-md-2-9 {
     flex-basis: 22.22222%; }
-  [class*=pylon] > .py-md-3-9 {
+  [class*=row] > .col-md-3-9 {
     flex-basis: 33.33333%; }
-  [class*=pylon] > .py-md-4-9 {
+  [class*=row] > .col-md-4-9 {
     flex-basis: 44.44444%; }
-  [class*=pylon] > .py-md-5-9 {
+  [class*=row] > .col-md-5-9 {
     flex-basis: 55.55556%; }
-  [class*=pylon] > .py-md-6-9 {
+  [class*=row] > .col-md-6-9 {
     flex-basis: 66.66667%; }
-  [class*=pylon] > .py-md-7-9 {
+  [class*=row] > .col-md-7-9 {
     flex-basis: 77.77778%; }
-  [class*=pylon] > .py-md-8-9 {
+  [class*=row] > .col-md-8-9 {
     flex-basis: 88.88889%; }
-  [class*=pylon] > .py-md-9-9 {
+  [class*=row] > .col-md-9-9 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-md-1-10 {
+  [class*=row] > .col-md-1-10 {
     flex-basis: 10%; }
-  [class*=pylon] > .py-md-2-10 {
+  [class*=row] > .col-md-2-10 {
     flex-basis: 20%; }
-  [class*=pylon] > .py-md-3-10 {
+  [class*=row] > .col-md-3-10 {
     flex-basis: 30%; }
-  [class*=pylon] > .py-md-4-10 {
+  [class*=row] > .col-md-4-10 {
     flex-basis: 40%; }
-  [class*=pylon] > .py-md-5-10 {
+  [class*=row] > .col-md-5-10 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-md-6-10 {
+  [class*=row] > .col-md-6-10 {
     flex-basis: 60%; }
-  [class*=pylon] > .py-md-7-10 {
+  [class*=row] > .col-md-7-10 {
     flex-basis: 70%; }
-  [class*=pylon] > .py-md-8-10 {
+  [class*=row] > .col-md-8-10 {
     flex-basis: 80%; }
-  [class*=pylon] > .py-md-9-10 {
+  [class*=row] > .col-md-9-10 {
     flex-basis: 90%; }
-  [class*=pylon] > .py-md-10-10 {
+  [class*=row] > .col-md-10-10 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-md-1-12 {
+  [class*=row] > .col-md-1-11 {
+    flex-basis: 9.09091%; }
+  [class*=row] > .col-md-2-11 {
+    flex-basis: 18.18182%; }
+  [class*=row] > .col-md-3-11 {
+    flex-basis: 27.27273%; }
+  [class*=row] > .col-md-4-11 {
+    flex-basis: 36.36364%; }
+  [class*=row] > .col-md-5-11 {
+    flex-basis: 45.45455%; }
+  [class*=row] > .col-md-6-11 {
+    flex-basis: 54.54545%; }
+  [class*=row] > .col-md-7-11 {
+    flex-basis: 63.63636%; }
+  [class*=row] > .col-md-8-11 {
+    flex-basis: 72.72727%; }
+  [class*=row] > .col-md-9-11 {
+    flex-basis: 81.81818%; }
+  [class*=row] > .col-md-10-11 {
+    flex-basis: 90.90909%; }
+  [class*=row] > .col-md-11-11 {
+    flex-basis: 100%; }
+  [class*=row] > .col-md-1-12 {
     flex-basis: 8.33333%; }
-  [class*=pylon] > .py-md-2-12 {
+  [class*=row] > .col-md-2-12 {
     flex-basis: 16.66667%; }
-  [class*=pylon] > .py-md-3-12 {
+  [class*=row] > .col-md-3-12 {
     flex-basis: 25%; }
-  [class*=pylon] > .py-md-4-12 {
+  [class*=row] > .col-md-4-12 {
     flex-basis: 33.33333%; }
-  [class*=pylon] > .py-md-5-12 {
+  [class*=row] > .col-md-5-12 {
     flex-basis: 41.66667%; }
-  [class*=pylon] > .py-md-6-12 {
+  [class*=row] > .col-md-6-12 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-md-7-12 {
+  [class*=row] > .col-md-7-12 {
     flex-basis: 58.33333%; }
-  [class*=pylon] > .py-md-8-12 {
+  [class*=row] > .col-md-8-12 {
     flex-basis: 66.66667%; }
-  [class*=pylon] > .py-md-9-12 {
+  [class*=row] > .col-md-9-12 {
     flex-basis: 75%; }
-  [class*=pylon] > .py-md-10-12 {
+  [class*=row] > .col-md-10-12 {
     flex-basis: 83.33333%; }
-  [class*=pylon] > .py-md-11-12 {
+  [class*=row] > .col-md-11-12 {
     flex-basis: 91.66667%; }
-  [class*=pylon] > .py-md-12-12 {
+  [class*=row] > .col-md-12-12 {
     flex-basis: 100%; } }
 
 @media all and (min-width: 1200px) {
-  [class*=pylon] > .py-lg-1 {
+  [class*=row] > .col-lg-1 {
     flex-basis: 8.33333%; }
-  [class*=pylon] > .py-lg-2 {
+  [class*=row] > .col-lg-2 {
     flex-basis: 16.66667%; }
-  [class*=pylon] > .py-lg-3 {
+  [class*=row] > .col-lg-3 {
     flex-basis: 25%; }
-  [class*=pylon] > .py-lg-4 {
+  [class*=row] > .col-lg-4 {
     flex-basis: 33.33333%; }
-  [class*=pylon] > .py-lg-5 {
+  [class*=row] > .col-lg-5 {
     flex-basis: 41.66667%; }
-  [class*=pylon] > .py-lg-6 {
+  [class*=row] > .col-lg-6 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-lg-7 {
+  [class*=row] > .col-lg-7 {
     flex-basis: 58.33333%; }
-  [class*=pylon] > .py-lg-8 {
+  [class*=row] > .col-lg-8 {
     flex-basis: 66.66667%; }
-  [class*=pylon] > .py-lg-9 {
+  [class*=row] > .col-lg-9 {
     flex-basis: 75%; }
-  [class*=pylon] > .py-lg-10 {
+  [class*=row] > .col-lg-10 {
     flex-basis: 83.33333%; }
-  [class*=pylon] > .py-lg-11 {
+  [class*=row] > .col-lg-11 {
     flex-basis: 91.66667%; }
-  [class*=pylon] > .py-lg-12 {
+  [class*=row] > .col-lg-12 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-lg-1-1 {
+  [class*=row] > .col-lg-1-1 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-lg-1-2 {
+  [class*=row] > .col-lg-1-2 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-lg-2-2 {
+  [class*=row] > .col-lg-2-2 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-lg-1-3 {
+  [class*=row] > .col-lg-1-3 {
     flex-basis: 33.33333%; }
-  [class*=pylon] > .py-lg-2-3 {
+  [class*=row] > .col-lg-2-3 {
     flex-basis: 66.66667%; }
-  [class*=pylon] > .py-lg-3-3 {
+  [class*=row] > .col-lg-3-3 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-lg-1-4 {
+  [class*=row] > .col-lg-1-4 {
     flex-basis: 25%; }
-  [class*=pylon] > .py-lg-2-4 {
+  [class*=row] > .col-lg-2-4 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-lg-3-4 {
+  [class*=row] > .col-lg-3-4 {
     flex-basis: 75%; }
-  [class*=pylon] > .py-lg-4-4 {
+  [class*=row] > .col-lg-4-4 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-lg-1-5 {
+  [class*=row] > .col-lg-1-5 {
     flex-basis: 20%; }
-  [class*=pylon] > .py-lg-2-5 {
+  [class*=row] > .col-lg-2-5 {
     flex-basis: 40%; }
-  [class*=pylon] > .py-lg-3-5 {
+  [class*=row] > .col-lg-3-5 {
     flex-basis: 60%; }
-  [class*=pylon] > .py-lg-4-5 {
+  [class*=row] > .col-lg-4-5 {
     flex-basis: 80%; }
-  [class*=pylon] > .py-lg-5-5 {
+  [class*=row] > .col-lg-5-5 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-lg-1-6 {
+  [class*=row] > .col-lg-1-6 {
     flex-basis: 16.66667%; }
-  [class*=pylon] > .py-lg-2-6 {
+  [class*=row] > .col-lg-2-6 {
     flex-basis: 33.33333%; }
-  [class*=pylon] > .py-lg-3-6 {
+  [class*=row] > .col-lg-3-6 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-lg-4-6 {
+  [class*=row] > .col-lg-4-6 {
     flex-basis: 66.66667%; }
-  [class*=pylon] > .py-lg-5-6 {
+  [class*=row] > .col-lg-5-6 {
     flex-basis: 83.33333%; }
-  [class*=pylon] > .py-lg-6-6 {
+  [class*=row] > .col-lg-6-6 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-lg-1-8 {
+  [class*=row] > .col-lg-1-8 {
     flex-basis: 12.5%; }
-  [class*=pylon] > .py-lg-2-8 {
+  [class*=row] > .col-lg-2-8 {
     flex-basis: 25%; }
-  [class*=pylon] > .py-lg-3-8 {
+  [class*=row] > .col-lg-3-8 {
     flex-basis: 37.5%; }
-  [class*=pylon] > .py-lg-4-8 {
+  [class*=row] > .col-lg-4-8 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-lg-5-8 {
+  [class*=row] > .col-lg-5-8 {
     flex-basis: 62.5%; }
-  [class*=pylon] > .py-lg-6-8 {
+  [class*=row] > .col-lg-6-8 {
     flex-basis: 75%; }
-  [class*=pylon] > .py-lg-7-8 {
+  [class*=row] > .col-lg-7-8 {
     flex-basis: 87.5%; }
-  [class*=pylon] > .py-lg-8-8 {
+  [class*=row] > .col-lg-8-8 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-lg-1-9 {
+  [class*=row] > .col-lg-1-9 {
     flex-basis: 11.11111%; }
-  [class*=pylon] > .py-lg-2-9 {
+  [class*=row] > .col-lg-2-9 {
     flex-basis: 22.22222%; }
-  [class*=pylon] > .py-lg-3-9 {
+  [class*=row] > .col-lg-3-9 {
     flex-basis: 33.33333%; }
-  [class*=pylon] > .py-lg-4-9 {
+  [class*=row] > .col-lg-4-9 {
     flex-basis: 44.44444%; }
-  [class*=pylon] > .py-lg-5-9 {
+  [class*=row] > .col-lg-5-9 {
     flex-basis: 55.55556%; }
-  [class*=pylon] > .py-lg-6-9 {
+  [class*=row] > .col-lg-6-9 {
     flex-basis: 66.66667%; }
-  [class*=pylon] > .py-lg-7-9 {
+  [class*=row] > .col-lg-7-9 {
     flex-basis: 77.77778%; }
-  [class*=pylon] > .py-lg-8-9 {
+  [class*=row] > .col-lg-8-9 {
     flex-basis: 88.88889%; }
-  [class*=pylon] > .py-lg-9-9 {
+  [class*=row] > .col-lg-9-9 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-lg-1-10 {
+  [class*=row] > .col-lg-1-10 {
     flex-basis: 10%; }
-  [class*=pylon] > .py-lg-2-10 {
+  [class*=row] > .col-lg-2-10 {
     flex-basis: 20%; }
-  [class*=pylon] > .py-lg-3-10 {
+  [class*=row] > .col-lg-3-10 {
     flex-basis: 30%; }
-  [class*=pylon] > .py-lg-4-10 {
+  [class*=row] > .col-lg-4-10 {
     flex-basis: 40%; }
-  [class*=pylon] > .py-lg-5-10 {
+  [class*=row] > .col-lg-5-10 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-lg-6-10 {
+  [class*=row] > .col-lg-6-10 {
     flex-basis: 60%; }
-  [class*=pylon] > .py-lg-7-10 {
+  [class*=row] > .col-lg-7-10 {
     flex-basis: 70%; }
-  [class*=pylon] > .py-lg-8-10 {
+  [class*=row] > .col-lg-8-10 {
     flex-basis: 80%; }
-  [class*=pylon] > .py-lg-9-10 {
+  [class*=row] > .col-lg-9-10 {
     flex-basis: 90%; }
-  [class*=pylon] > .py-lg-10-10 {
+  [class*=row] > .col-lg-10-10 {
     flex-basis: 100%; }
-  [class*=pylon] > .py-lg-1-12 {
+  [class*=row] > .col-lg-1-11 {
+    flex-basis: 9.09091%; }
+  [class*=row] > .col-lg-2-11 {
+    flex-basis: 18.18182%; }
+  [class*=row] > .col-lg-3-11 {
+    flex-basis: 27.27273%; }
+  [class*=row] > .col-lg-4-11 {
+    flex-basis: 36.36364%; }
+  [class*=row] > .col-lg-5-11 {
+    flex-basis: 45.45455%; }
+  [class*=row] > .col-lg-6-11 {
+    flex-basis: 54.54545%; }
+  [class*=row] > .col-lg-7-11 {
+    flex-basis: 63.63636%; }
+  [class*=row] > .col-lg-8-11 {
+    flex-basis: 72.72727%; }
+  [class*=row] > .col-lg-9-11 {
+    flex-basis: 81.81818%; }
+  [class*=row] > .col-lg-10-11 {
+    flex-basis: 90.90909%; }
+  [class*=row] > .col-lg-11-11 {
+    flex-basis: 100%; }
+  [class*=row] > .col-lg-1-12 {
     flex-basis: 8.33333%; }
-  [class*=pylon] > .py-lg-2-12 {
+  [class*=row] > .col-lg-2-12 {
     flex-basis: 16.66667%; }
-  [class*=pylon] > .py-lg-3-12 {
+  [class*=row] > .col-lg-3-12 {
     flex-basis: 25%; }
-  [class*=pylon] > .py-lg-4-12 {
+  [class*=row] > .col-lg-4-12 {
     flex-basis: 33.33333%; }
-  [class*=pylon] > .py-lg-5-12 {
+  [class*=row] > .col-lg-5-12 {
     flex-basis: 41.66667%; }
-  [class*=pylon] > .py-lg-6-12 {
+  [class*=row] > .col-lg-6-12 {
     flex-basis: 50%; }
-  [class*=pylon] > .py-lg-7-12 {
+  [class*=row] > .col-lg-7-12 {
     flex-basis: 58.33333%; }
-  [class*=pylon] > .py-lg-8-12 {
+  [class*=row] > .col-lg-8-12 {
     flex-basis: 66.66667%; }
-  [class*=pylon] > .py-lg-9-12 {
+  [class*=row] > .col-lg-9-12 {
     flex-basis: 75%; }
-  [class*=pylon] > .py-lg-10-12 {
+  [class*=row] > .col-lg-10-12 {
     flex-basis: 83.33333%; }
-  [class*=pylon] > .py-lg-11-12 {
+  [class*=row] > .col-lg-11-12 {
     flex-basis: 91.66667%; }
-  [class*=pylon] > .py-lg-12-12 {
+  [class*=row] > .col-lg-12-12 {
     flex-basis: 100%; } }
 
-.py-auto {
+.col-auto {
   -webkit-box-flex: 2;
   flex: 2 2 auto; }
 
-[class*=py][class*=justify-start],
-[class*=pylon][class*=justify-start] {
+[class*=col][class*=justify-start],
+[class*=row][class*=justify-start] {
   -webkit-box-pack: start;
   justify-content: flex-start;
   text-align: left; }
 
-[class*=py][class*=justify-center],
-[class*=py] [class*=py][class*=center],
-[class*=py]
-[class*=pylon][class*=center],
-[class*=pylon][class*=justify-center],
-[class*=pylon] [class*=py][class*=center],
-[class*=pylon]
-[class*=pylon][class*=center] {
+[class*=col][class*=justify-center],
+[class*=col] [class*=col][class*=center],
+[class*=col]
+[class*=row][class*=center],
+[class*=row][class*=justify-center],
+[class*=row] [class*=col][class*=center],
+[class*=row]
+[class*=row][class*=center] {
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center; }
 
-[class*=py][class*=justify-end],
-[class*=pylon][class*=justify-end] {
+[class*=col][class*=justify-end],
+[class*=row][class*=justify-end] {
   -webkit-box-pack: end;
   justify-content: flex-end;
   text-align: right; }
 
-[class*=py][class*=align-start],
-[class*=pylon][class*=align-start] {
+[class*=col][class*=align-start],
+[class*=row][class*=align-start] {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: start;
   align-items: flex-start; }
 
-[class*=py][class*=align-center],
-[class*=py] [class*=py][class*=center],
-[class*=py]
-[class*=pylon][class*=center],
-[class*=pylon][class*=align-center],
-[class*=pylon] [class*=py][class*=center],
-[class*=pylon]
-[class*=pylon][class*=center] {
+[class*=col][class*=align-center],
+[class*=col] [class*=col][class*=center],
+[class*=col]
+[class*=row][class*=center],
+[class*=row][class*=align-center],
+[class*=row] [class*=col][class*=center],
+[class*=row]
+[class*=row][class*=center] {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
   align-items: center; }
 
-[class*=py][class*=align-end],
-[class*=pylon][class*=align-end] {
+[class*=col][class*=align-end],
+[class*=row][class*=align-end] {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: end;
   align-items: flex-end; }
 
-[class*=py][class*=stretch],
-[class*=pylon][class*=stretch] {
+[class*=col][class*=stretch],
+[class*=row][class*=stretch] {
   -webkit-box-align: stretch;
   -ms-grid-row-align: stretch;
   align-items: stretch; }
 
-[class*=py][class*=wrap],
-[class*=pylon][class*=wrap] {
+[class*=col][class*=wrap],
+[class*=row][class*=wrap] {
   flex-wrap: wrap; }
 
-[class*=py][class*=pull-end],
-[class*=pylon][class*=pull-end] {
+[class*=col][class*=pull-end],
+[class*=row][class*=pull-end] {
   margin-left: auto !important; }
 
-[class*=py][class*=pull-start],
-[class*=pylon][class*=pull-start] {
+[class*=col][class*=pull-start],
+[class*=row][class*=pull-start] {
   margin-right: auto !important; }
 
-[class*=py][class*=dir-column],
-[class*=pylon][class*=dir-column] {
+[class*=col][class*=dir-column],
+[class*=row][class*=dir-column] {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   flex-direction: column; }

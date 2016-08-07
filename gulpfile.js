@@ -2,15 +2,15 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
 //default task
-gulp.task('default', ['demo', 'dist', 'watch']);
+gulp.task('default', ['dist', 'demo', 'watch']);
 
 //watch Files For Changes
 gulp.task('watch', function() {
-  return gulp.watch('**/*.scss', ['dist']);
+  return gulp.watch('**/*.scss', ['dist', 'demo']);
 });
 
 gulp.task('demo', function(){
-  return gulp.src('demo/styles/**/*.scss')
+  return gulp.src('demo/style/**/*.scss')
      .pipe($.plumber({errorHandler: function(error){
         console.log(error);
         this.emit('end');
@@ -20,7 +20,7 @@ gulp.task('demo', function(){
      .pipe($.autoprefixer({browsers: ['last 1 version', 'iOS 6'], cascade: false}))
      .pipe($.sourcemaps.write({includeContent: false, sourceRoot: '.'}))
      //.pipe($.cssnano({discardDuplicates: false})) //optional minification
-     .pipe(gulp.dest('demo/styles'));
+     .pipe(gulp.dest('demo/style'));
 });
 
 //SASS build process

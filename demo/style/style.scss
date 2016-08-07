@@ -1,7 +1,7 @@
-[class*=grd-row] { background-color: rgba(255, 255, 255, 0.06); position: relative; margin-top: 60px;
+[class*=row] { background-color: rgba(255, 255, 255, 0.06); position: relative; margin-top: 15px;
   > code { top: -30px; border-bottom-right-radius: 0; border-bottom-left-radius: 0; right: 0; left: 0; position: absolute; }
 }
-[class*=grd-col], [class*=grd-row-inline] > div { min-height: 100px; padding: 20px; background-color: rgba(255, 255, 255, 0.06); position: relative;
+[class*=col], [class*=row] > div { min-height: 30px; padding: 20px; background-color: rgba(255, 255, 255, 0.06); position: relative;
   &:nth-child(2n) { background-color: #5EC1C7; }
   &:nth-child(2n+1) { background-color: #4EA1A6; }
   > code { }

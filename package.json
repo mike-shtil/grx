@@ -1,6 +1,6 @@
 {
   "name": "grx",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Own your layout with a friendly flex-based grid",
   "main": "gulpfile.js",
   "dependencies": {},

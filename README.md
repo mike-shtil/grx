@@ -1,6 +1,6 @@
-# Pylon
-## a friendly flexible box layout grid
+# Grx
+## Grx is a layout grid utilizing on CSS3's flexbox model.
 
-**Pylon** allows you to create scalable layouts in a dependable, declarative way. Under the hood, **Pylon** is based on the awesome flexible box CSS3 syntax.
+**Grx** allows you to implement scalable layouts in a dependable, declarative manner. The syntax is lightweight, relying on defaults as much as possible for easy rapid prototyping.
 
 ### Stay tuned for updates.

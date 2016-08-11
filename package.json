@@ -1,7 +1,7 @@
 {
-  "name": "grd",
-  "version": "2.0.0",
-  "description": "",
+  "name": "grx",
+  "version": "2.0.1",
+  "description": "Own your layout with a friendly flex-based grid",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mike-shtil/grd.git"
+    "url": "git+https://github.com/mike-shtil/grx.git"
   },
   "keywords": [
     "flex",
@@ -32,10 +32,10 @@
     "css",
     "layout"
   ],
-  "author": "Mike Shtilerman",
+  "author": "Mike (Michael) Shtilerman",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mike-shtil/grd/issues"
+    "url": "https://github.com/mike-shtil/grx/issues"
   },
-  "homepage": "https://github.com/mike-shtil/grd#readme"
+  "homepage": "https://github.com/mike-shtil/grx#readme"
 }

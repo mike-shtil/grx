@@ -31,7 +31,7 @@ $py_breakpoints: ( sm: 768px, md: 992px, lg: 1200px ); //breakpoints for media q
     @each $name, $value in $py_gutters {
         &[class*=gutter-#{$name}] {
             margin: -$value/2;
-            > * {
+            > [class*=#{$py_col-prefix}] {
                 padding: $value/2;
             }
         }
@@ -43,8 +43,8 @@ $py_breakpoints: ( sm: 768px, md: 992px, lg: 1200px ); //breakpoints for media q
 ////////
 
 [class*=#{$py_row-prefix}] > [class*=#{$py_col-prefix}] {
-    flex-grow: 1;
-    flex-shrink: 1;
+    // flex-grow: 0;
+    // flex-shrink: 1;
     box-sizing: border-box;
 }
 //default (null) breakpoint
@@ -130,7 +130,8 @@ $py_breakpoints: ( sm: 768px, md: 992px, lg: 1200px ); //breakpoints for media q
         align-items: stretch;
     }
     //align and justify
-    &[class*=center] {
+    &[class^=center], &[class*=' center'] {
+      //more speciifc tag, prevents also selecting align-center or justify-center
         @extend %justify-center;
         @extend %align-center;
     }

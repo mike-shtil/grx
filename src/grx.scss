@@ -12,7 +12,7 @@
 ////////
 
 $py_container: 'grx-row'; //prefix to use on flex containers
-$py_vcontainer: 'grx-vrow'; //prefix to use on vertical flex containers
+$py_vcontainer: 'grx-col'; //prefix to use on vertical flex containers
 $py_size: size; //prefix to use on children of flex containers, when indicating size
 $py_bases: 1 2 3 4 5 6 8 9 10 12; //grid width fraction denominators to support
 $py_base_default: 12; //default grid base, used when no base is specified
@@ -134,10 +134,10 @@ $py_breakpoints: ( sm: 768px, md: 992px, lg: 1200px ); //breakpoints for media q
     &.align-stretch {
         align-items: stretch;
     }
-    //align and justify
     &.center {
-        @extend %justify-center;
-        @extend %align-center;
+        //align and justify
+        @extend .align-center;
+        @extend .justify-center;
     }
     &.wrap {
         flex-wrap: wrap;

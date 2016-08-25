@@ -1,9 +1,9 @@
 {
-  "name": "Pylon",
+  "name": "grx",
   "authors": [
     "Michael (Mike) Shtilerman <mike.shtil@gmail.com>"
   ],
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Own your layout with a friendly flex-based grid",
   "main": "dist/grx.css",
   "moduleType": [

@@ -1,16 +1,16 @@
 {
   "name": "Pylon",
   "authors": [
-    "Mike Shtilerman <mike.shtil@gmail.com>"
+    "Michael (Mike) Shtilerman <mike.shtil@gmail.com>"
   ],
-  "version": "0.9",
-  "description": "a friendly flexible box layout grid (alpha!)",
-  "main": "dist/pylon.css",
+  "version": "2.2.1",
+  "description": "Own your layout with a friendly flex-based grid",
+  "main": "dist/grx.css",
   "moduleType": [
     "node"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/mike-shtil/Pylon",
+  "homepage": "https://github.com/mike-shtil/grx",
   "ignore": [
     "node_modules",
     "bower_components",

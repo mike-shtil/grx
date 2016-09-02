@@ -102,7 +102,7 @@ $py_breakpoints: ( sm: 768px, md: 992px, lg: 1200px ); //breakpoints for media q
 //general element
 /////////////////
 
-.#{$py_container} {
+.#{$py_container}, .#{$py_vcontainer} {
     //justify (horizontal in row)
     &.justify-start {
         justify-content: flex-start;
@@ -119,16 +119,13 @@ $py_breakpoints: ( sm: 768px, md: 992px, lg: 1200px ); //breakpoints for media q
     }
     //align (vertical in row)
     &.align-start {
-        display: flex;
         align-items: flex-start;
     }
      &.align-center,
     %align-center {
-        display: flex;
         align-items: center;
     }
     &.align-end {
-        display: flex;
         align-items: flex-end;
     }
     &.align-stretch {

@@ -1,226 +1,193 @@
-<html><head>
+<html>
+<head>
     <meta charset="utf-8">
     <title>Grx - a flexbox-based layout grid</title>
-
     <link rel="stylesheet" href="../dist/grx.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="style/style.css" media="screen" title="no title" charset="utf-8">
 </head>
-
 <body>
 
     <section class="main container">
 
-        <h1>grd</h1>
-
+        <h1>Grx</h1>
         <h3>Welcome to Grx — a flexbox-based layout grid system.</h3>
 
-        <p>Similar to other grids, the we create rows which contain one or more columns.</p>
+        <p>
+          Let's prepare a header. A grx-row holds its children side-by-side.
+        </p>
 
-        <div class="row">
-            <code>&lt;div class="row"&gt;</code>
-            <div class="col-4-12">
-                <code>&lt;div class="col-4-12"&gt;</code>
-            </div>
-            <div class="col-8-12">
-                <code>&lt;div class="col-8-12"&gt;</code>
-            </div>
+        <header class="grx-row">
+          <div class="dummy-logo">
+            Logo
+          </div>
+          <nav>
+            <a class="dummy-link"></a>
+            <a class="dummy-link"></a>
+            <a class="dummy-link"></a>
+          </nav>
+        </header>
+
+        <p>
+          We'll stretch the menu area to take up all remaining width.
+        </p>
+
+        <header class="grx-row">
+          <div class="dummy-logo">
+            Logo
+          </div>
+          <nav>
+            <a class="dummy-link"></a>
+            <a class="dummy-link"></a>
+            <a class="dummy-link"></a>
+          </nav>
+        </header>
+
+        <p>
+          Add another grx-row with main and sidebar.<br>
+          size- gives children relative width. Note the main and sidebar elements automatically take up the same height.<br>
+        </p>
+
+        <header class="grx-row">
+          <div class="dummy-logo">
+            Logo
+          </div>
+          <nav>
+            <a class="dummy-link"></a>
+            <a class="dummy-link"></a>
+            <a class="dummy-link"></a>
+          </nav>
+        </header>
+        <div class="grx-row">
+          <div title="sidebar" class="size-4">
+            <div class="dummy-thumbnail"></div>
+            <div class="dummy-thumbnail"></div>
+            <div class="dummy-thumbnail"></div>
+          </div>
+          <div title="main" class="size-8">
+            <p class="dummy-content"></p>
+          </div>
         </div>
 
-        <p>But why stop at 12-based grid... use any base!</p>
+        <p>
+          Time to decorate the sidebar with an image gallery. 'wrap' lets content wrap to multiple lines. The gutter spaces elements in both directions.<br>
+          'pull-bottom' keeps the gallery pinned at the bottom.
+        </p>
 
-        <div class="row">
-            <code>&lt;div class="row"&gt;</code>
-            <div class="col-3-5">
-                <code>&lt;div class="col-3-5"&gt;</code>
+        <header class="grx-row">
+          <div class="dummy-logo">
+            Logo
+          </div>
+          <nav>
+            <a class="dummy-link"></a>
+            <a class="dummy-link"></a>
+            <a class="dummy-link"></a>
+          </nav>
+        </header>
+        <div class="grx-row">
+          <div title="sidebar" class="size-4">
+            <div class="dummy-thumbnail"></div>
+            <div class="dummy-thumbnail"></div>
+            <div class="dummy-thumbnail"></div>
+            <div class="image-gallery grx-row wrap align-center gutter-md">
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
             </div>
-            <div class="col-2-5">
-                <code>&lt;div class="col-2-5"&gt;</code>
-            </div>
+          </div>
+          <div title="main" class="size-8">
+            <p class="dummy-content"></p>
+          </div>
         </div>
 
-        <p>Mix and match bases!</p>
+        <p>
+          grx-col is grx-row's vertical brother, allowing the same ticks.<br>
+          Make the sidebar a 'grx-col' and Use 'pull-end' to pin the gallery to the end.
+        </p>
 
-        <div class="row">
-            <code>&lt;div class="row"&gt;</code>
-            <div class="col-1-4">
-                <code>&lt;div class="col-1-4"&gt;</code>
+        <header class="grx-row">
+          <div class="dummy-logo">
+            Logo
+          </div>
+          <nav>
+            <a class="dummy-link"></a>
+            <a class="dummy-link"></a>
+            <a class="dummy-link"></a>
+          </nav>
+        </header>
+        <div class="grx-row">
+          <div title="sidebar" class="size-4">
+            <div class="dummy-thumbnail"></div>
+            <div class="dummy-thumbnail"></div>
+            <div class="dummy-thumbnail"></div>
+            <div class="image-gallery grx-row wrap align-center gutter-md">
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
             </div>
-            <div class="col-2-8">
-                <code>&lt;div class="col-2-8"&gt;</code>
-            </div>
-            <div class="col-1-2">
-                <code>&lt;div class="col-1-2"&gt;</code>
-            </div>
+          </div>
+          <div title="main" class="size-8">
+            <p class="dummy-content"></p>
+          </div>
         </div>
 
-        <p>The widths don't have to add-up to 100%.</p>
+        <p>
+          Back in the main section, implement a contact form with a combination of child sizes.
+        </p>
 
-        <div class="row">
-            <code>&lt;div class="row"&gt;</code>
-            <div class="col-1-3">
-                <code>&lt;div class="col-1-3"&gt;</code>
+        <header class="grx-row">
+          <div class="dummy-logo">
+            Logo
+          </div>
+          <nav>
+            <a class="dummy-link"></a>
+            <a class="dummy-link"></a>
+            <a class="dummy-link"></a>
+          </nav>
+        </header>
+        <div class="grx-row">
+          <div title="sidebar" class="size-4">
+            <div class="dummy-thumbnail"></div>
+            <div class="dummy-thumbnail"></div>
+            <div class="dummy-thumbnail"></div>
+            <div class="image-gallery grx-row wrap align-center gutter-md">
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
+              <div class="dummy-image size-1-3"></div>
             </div>
-            <div class="col-1-3">
-                <code>&lt;div class="col-1-3"&gt;</code>
+          </div>
+          <div title="main" class="size-8">
+            <p class="dummy-content"></p>
+            <div class="contact-form grx-row">
+              <div class="size-2-5">
+                <input type="text" class="dummy-input" placeholder="Name">
+                <input type="text" class="dummy-input" placeholder="Phone">
+                <input type="text" class="dummy-input" placeholder="Email">
+              </div>
+              <div class="size-auto">
+                <textarea name="" class="dummy-textarea" cols="30" rows="10"></textarea>
+              </div>
+              <div class="grx-col justify-end">
+                <button>Send</button>
+              </div>
             </div>
+          </div>
         </div>
-
-        <div class="row gutter-md">
-            <code>&lt;div class="row"&gt;</code>
-            <div class="col-1-3">
-                <code>&lt;div class="col-1-3"&gt;</code>
-            </div>
-            <div class="col-1-3">
-                <code>&lt;div class="col-1-3"&gt;</code>
-            </div>
-            <div class="col-1-3">
-                <code>&lt;div class="col-1-3"&gt;</code>
-            </div>
-            <div class="col-1-3">
-                <code>&lt;div class="col-1-3"&gt;</code>
-            </div>
-        </div>
-
-        <p>Perhaps we want columns to take up just as much width as their content need</p>
-
-        <div class="row">
-            <code>&lt;div class="row"&gt;</code>
-            <div class="col">
-                <code>&lt;div class="col"&gt;</code>
-            </div>
-            <div class="col">
-                <code>&lt;div class="col"&gt;</code>
-            </div>
-            <div class="col">
-                <code>&lt;div class="col"&gt;</code>
-            </div>
-        </div>
-
-        <p>This is so useful, a shorter syntax exists:</p>
-
-        <div class="row">
-            <code>&lt;div class="row"&gt;</code>
-            <div>
-                <code>&lt;div&gt;</code>
-            </div>
-            <div>
-                <code>&lt;div&gt;</code>
-            </div>
-            <div>
-                <code>&lt;div&gt;</code>
-            </div>
-        </div>
-
-        <div class="row">
-            <code>&lt;div class="row"&gt;</code>
-            <input type="text">
-            <code>&lt;input type="text"&gt;</code>
-            <button>
-                <code>&lt;button&gt;</code>
-            </button>
-            <div>
-                <code>&lt;div&gt;</code>
-            </div>
-        </div>
-
-        <p>Some cells can dynamically take up the remaining width</p>
-
-        <div class="row">
-            <code>&lt;div class="row"&gt;</code>
-            <div class="col">
-                <code>&lt;div class="col"&gt;</code>
-            </div>
-            <div class="col">
-                <code>&lt;div class="col"&gt;</code>
-            </div>
-            <div class="col-auto">
-                <code>&lt;div class="col-auto"&gt;</code>
-            </div>
-        </div>
-
-        <div class="row">
-            <code>&lt;div class="row"&gt;</code>
-            <div class="col-2-6">
-                <code>&lt;div class="col-2-6"&gt;</code>
-            </div>
-            <div class="col-auto">
-                <code>&lt;div class="col-auto"&gt;</code>
-            </div>
-            <div class="col-1-6">
-                <code>&lt;div class="col-1-6"&gt;</code>
-            </div>
-        </div>
-
-        <p>Multiple col-auto share the remaining width equally<small>As long as they don't overflow</small></p>
-
-        <div class="row">
-            <code>&lt;div class="row"&gt;</code>
-            <div class="col-2-6">
-                <code>&lt;div class="col-2-6"&gt;</code>
-            </div>
-            <div class="col-auto">
-                <code>&lt;div class="col-auto"&gt;</code>
-            </div>
-            <div class="col-auto">
-                <code>&lt;div class="col-auto"&gt;</code>
-            </div>
-            <div class="col-1-6">
-                <code>&lt;div class="col-1-6"&gt;</code>
-            </div>
-        </div>
-
-        <p>Maybe you want to pull the last columns to the end<small>Only the first pulled colum needs the pull- class</small></p>
-
-        <div class="row">
-            <code>&lt;div class="row"&gt;</code>
-            <div class="col-1-3">
-                <code>&lt;div class="col-1-3"&gt;</code>
-            </div>
-            <div class="col-1-3 pull-end">
-                <code>&lt;div class="col-1-3 pull-end"&gt;</code>
-            </div>
-        </div>
-
-        <div class="row">
-            <code>&lt;div class="row"&gt;</code>
-            <div class="col-1-5">
-                <code>&lt;div class="col-1-5"&gt;</code>
-            </div>
-            <div class="col-1-5 pull-end">
-                <code>&lt;div class="col-1-5 pull-end"&gt;</code>
-            </div>
-            <div class="col-1-5">
-                <code>&lt;div class="col-1-5"&gt;</code>
-            </div>
-            <div class="col-1-5">
-                <code>&lt;div class="col-1-5"&gt;</code>
-            </div>
-        </div>
-
-        <p>Now the real beauty of flexbox - dynamic content vertical alignment!</p>
-
-        <div class="row">
-            <code>&lt;div class="row"&gt;</code>
-            <div class="col-1-4 align-center">
-                <code>&lt;div class="col-1-4 align-center"&gt;</code>
-            </div>
-            <div class="col-3-4 align-center">
-                <code>&lt;div class="col-3-4 align-center"&gt;</code>
-            </div>
-        </div>
-
-        <div class="row">
-            <code>&lt;div class="row"&gt;</code>
-            <div class="col-1-4 align-end">
-                <code>&lt;div class="col-1-4 align-end"&gt;</code>
-            </div>
-            <div class="col-3-4 align-end">
-                <code>&lt;div class="col-3-4 align-end"&gt;</code>
-            </div>
-        </div>
-
 
     </section>
-
-
-</body></html>
+</body>
+</html>

@@ -1,20 +1,119 @@
-$yellow: #dcd07b;
-$green: #5ec788;
+//vars
+$color-body: #001A33;
+$color-bg-body: #ececec;
+$color-bg-row: transparent;
+$color-bg-row2: #bbb;
+$color-bg-row3: #aaa;
+$color-bg-cell: #007FFF;
+$color-bg-cell2: #06C;
+$color-bg-cell3: #036;
+$color-bg-explanation: $color-bg-body solid 2px;
+$border-row: $color-bg-body solid 2px;
+$border-row2: none;
+$border-row2: none;
+$border-row3: none;
+$border-cell: $color-bg-body dashed 1px;
+$border-cell2: #65a7ea solid 2px;
+$border-cell3: #65a7ea solid 2px;
+$color-bg-dummy1: pink;
 
-.grx-row { background-color: rgba(255, 255, 255, 0.06); position: relative; margin-top: 15px;
-  > code { top: -30px; border-bottom-right-radius: 0; border-bottom-left-radius: 0; right: 0; left: 0; position: absolute; }
-}
-.grx-row > * { min-height: 30px; padding: 20px; background-color: rgba(255, 255, 255, 0.06); position: relative;
-  
-  > code { }
-}
-
+//base
 * { box-sizing: border-box; }
 html { font-size: 10px; }
-body { background: #403F44; color: #68D6DC; font-family: Helvetica, Arial, sans-serif; font-size: 17px; line-height: 1.4; }
-p { background-color: rgba(255, 255, 255, 0.06); padding: 20px; margin-top: 60px; }
+body { background: $color-bg-body; color: $color-body; font-family: Helvetica, Arial, sans-serif; font-size: 17px; line-height: 1.4; font-family: 'Roboto', Helvetica, sans-seritf;}
 button { border: none; background-color: #888; }
 small { display: block; font-size: 0.9em; color: #5DA7AB; }
 code { font-family: Consolas, monospace; display: block; color: #C866E6; background-color: #2B2A31; border-radius: 3px; padding: 5px 10px; font-size: 0.9em; }
-
 .container { width: 1200px; margin-right: auto; margin-left: auto; }
+.main-header { text-align: center; }
+.main-title { font-weight: 900; font-size: 100px; margin-bottom: 0; }
+
+//explanations
+.explanation { background-color: $color-bg-explanation; padding: 20px; margin-top: 60px; }
+
+//container
+.grx-row, .grx-col { background-color: $color-bg-row; position: relative;
+  > code { top: -30px; border-bottom-right-radius: 0; border-bottom-left-radius: 0; right: 0; left: 0; position: absolute; }
+
+  //cell
+  > * { min-height: 30px; padding: 20px; background-color: $color-bg-cell; position: relative; border: $border-cell;
+    > code { }
+  }
+}
+
+//container2
+.grd-row, .grx-col {
+  .grx-row, .grx-col {
+    background-color: $color-bg-row2; border: $border-row2;
+
+    //cell2
+    > * { background-color: $color-bg-cell2; border: $border-cell2;
+    }
+  }
+}
+
+//container3
+.grd-row, .grx-col {
+  .grx-row, .grx-col {
+    background-color: $color-bg-row3; border: $border-row3;
+
+    //cell2
+    > * { background-color: $color-bg-cell3; border: $border-cell3;
+    }
+  }
+}
+
+//dummies
+.dummy-link {
+  &:after {
+    content: 'Link';
+    background-color: #ccc;
+    display: inline-block;
+    padding: 5px 10px;
+  }
+}
+
+.dummy-image {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#cb60b3+0,ad1283+50,de47ac+100;Pink+3D */
+  background: #cb60b3; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #cb60b3 0%, #ad1283 50%, #de47ac 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg,  #cb60b3 0%,#ad1283 50%,#de47ac 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg,  #cb60b3 0%,#ad1283 50%,#de47ac 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb60b3', endColorstr='#de47ac',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  width: 100px;
+  height: 100px;
+  max-width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  &:after {
+    content: 'image';
+  }
+}
+
+.dummy-textarea, .dummy-input {
+  width: 100%;
+  border: none;
+  background: #001A33;
+  padding: 10px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #eee;
+}
+
+pre {
+  overflow-x: auto;
+    padding: 1.25em;
+    border: 1px solid #e6e6e6;
+    border-left-width: 5px;
+    margin: 1.6em 0;
+    font-size: .875em;
+    background: #fcfcfc;
+    white-space: pre;
+    word-wrap: normal;
+    color: #007FFF;
+
+    code {
+    }
+}

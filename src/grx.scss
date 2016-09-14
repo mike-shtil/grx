@@ -7,30 +7,20 @@
 * distributed under MIT license
 */
 
-////////
-//params
-////////
-
-$py_container: 'grx-row'; //prefix to use on flex containers
-$py_vcontainer: 'grx-col'; //prefix to use on vertical flex containers
-$py_size: size; //prefix to use on children of flex containers, when indicating size
-$py_bases: 1 2 3 4 5 6 8 9 10 12; //grid width fraction denominators to support
-$py_base_default: 12; //default grid base, used when no base is specified
-$py_gutters: ( xs: 0.5rem, sm: 1rem, md: 2rem, lg: 4rem, xl: 8rem ); //params - gutter - vertical and horizontal separating columns (should be >= 0)
-$py_breakpoints: ( sm: 768px, md: 992px, lg: 1200px ); //breakpoints for media queries - mobile first
+@import '_params.scss';
 
 ///////////
 //container
 ///////////
 
-.#{$py_container}, .#{$py_vcontainer} {
+.#{$row}, .#{$col} {
     display: flex;
     align-items: stretch;
     box-sizing: border-box;
     ////////
     //gutter
     ////////
-    @each $name, $value in $py_gutters {
+    @each $name, $value in $gutters {
         &.gutter-#{$name} {
             margin: -$value/2;
             > * {
@@ -40,7 +30,7 @@ $py_breakpoints: ( sm: 768px, md: 992px, lg: 1200px ); //breakpoints for media q
     }
 }
 
-.#{$py_vcontainer} {
+.#{$col} {
   flex-direction: column;
 }
 
@@ -48,7 +38,7 @@ $py_breakpoints: ( sm: 768px, md: 992px, lg: 1200px ); //breakpoints for media q
 //container children
 ////////////////////
 
-.#{$py_container}, .#{$py_container} > * {
+.#{$row}, .#{$row} > * {
     // flex-grow: 0;
     // flex-shrink: 1;
     box-sizing: border-box;
@@ -56,16 +46,16 @@ $py_breakpoints: ( sm: 768px, md: 992px, lg: 1200px ); //breakpoints for media q
 //default (null) breakpoint
 @media all and (min-width: 0) {
     //default base
-    .#{$py_container} {
-        @for $n from 1 through $py_base_default {
-            > .#{$py_size}-#{$n} {
-                flex-basis: percentage($n / $py_base_default);
+    .#{$row} {
+        @for $n from 1 through $base_default {
+            > .#{$size}-#{$n} {
+                flex-basis: percentage($n / $base_default);
             }
         }
         //dynamic bases
-        @each $base in $py_bases {
+        @each $base in $bases {
              @for $n from 1 through $base{
-                > .#{$py_size}-#{$n}-#{$base} {
+                > .#{$size}-#{$n}-#{$base} {
                     flex-basis: percentage($n / $base);
                 }
             }
@@ -73,19 +63,19 @@ $py_breakpoints: ( sm: 768px, md: 992px, lg: 1200px ); //breakpoints for media q
     }
 }
 //dynamic breakpoints
-@each $bpname, $bpvalue in $py_breakpoints {
+@each $bpname, $bpvalue in $breakpoints {
      @media all and (min-width: #{$bpvalue}){
-      .#{$py_container} {
+      .#{$row} {
             //default base
-            @for $n from 1 through $py_base_default {
-                > .#{$py_size}-#{$bpname}-#{$n} {
-                    flex-basis: percentage($n / $py_base_default);
+            @for $n from 1 through $base_default {
+                > .#{$size}-#{$bpname}-#{$n} {
+                    flex-basis: percentage($n / $base_default);
                 }
             }
             //dynamic bases
-            @each $base in $py_bases {
+            @each $base in $bases {
                  @for $n from 1 through $base{
-                    > .#{$py_size}-#{$bpname}-#{$n}-#{$base} {
+                    > .#{$size}-#{$bpname}-#{$n}-#{$base} {
                         flex-basis: percentage($n / $base);
                     }
                 }
@@ -93,7 +83,7 @@ $py_breakpoints: ( sm: 768px, md: 992px, lg: 1200px ); //breakpoints for media q
         }
     }
 }
-.#{$py_size}-auto {
+.#{$size}-auto {
     //column which takes up entire remaining free space (width) in the row
     flex: 2 2 auto;
 }
@@ -102,7 +92,7 @@ $py_breakpoints: ( sm: 768px, md: 992px, lg: 1200px ); //breakpoints for media q
 //general element
 /////////////////
 
-.#{$py_container}, .#{$py_vcontainer} {
+.#{$row}, .#{$col} {
     //justify (horizontal in row)
     &.justify-start {
         justify-content: flex-start;
@@ -147,7 +137,7 @@ $py_breakpoints: ( sm: 768px, md: 992px, lg: 1200px ); //breakpoints for media q
     }
 }
 
-.#{$py_vcontainer} {
+.#{$col} {
   > .pull-end {
       margin-top: auto !important;
   }

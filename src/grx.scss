@@ -8,6 +8,7 @@
 */
 
 @import '_params.scss';
+@import '_partials.scss';
 
 ///////////
 //container
@@ -15,8 +16,8 @@
 
 .#{$row}, .#{$col} {
     display: flex;
-    align-items: stretch;
     box-sizing: border-box;
+
     ////////
     //gutter
     ////////
@@ -93,55 +94,71 @@
 /////////////////
 
 .#{$row}, .#{$col} {
-    //justify (horizontal in row)
-    &.justify-start {
-        justify-content: flex-start;
-        //text-align: left;
-    }
-     &.justify-center,
-    %justify-center {
-        justify-content: center;
-        //text-align: center;
-    }
-    &.justify-end {
-        justify-content: flex-end;
-        //text-align: right;
-    }
-    //align (vertical in row)
-    &.align-start {
-        align-items: flex-start;
-    }
-     &.align-center,
-    %align-center {
-        align-items: center;
-    }
-    &.align-end {
-        align-items: flex-end;
-    }
-    &.align-stretch {
-        align-items: stretch;
-    }
-    &.center {
-        //align and justify
-        @extend .align-center;
-        @extend .justify-center;
-    }
     &.wrap {
         flex-wrap: wrap;
     }
-    > .pull-end {
-      margin-left: auto !important;
-    }
-    > .pull-start {
-      margin-right: auto !important;
+    &.center {
+      @extend %justify-center;
+      @extend %align-center;
     }
 }
 
-.#{$col} {
-  > .pull-end {
-      margin-top: auto !important;
+.#{$row} {
+  &[class*="align-"] {
+    &[class*="-right"] {
+      @extend %justify-end;
+    }
+    &[class*="-center"] {
+      @extend %justify-center;
+    }
+    &[class*="-left"] {
+      @extend %justify-start;
+    }
+    &[class*="-bottom"] {
+      @extend %align-end;
+    }
+    &[class*="-middle"] {
+      @extend %align-center;
+    }
+    &[class*="-top"] {
+      @extend %align-start;
+    }
   }
-  > .pull-start {
-      margin-bottom: auto !important;
+
+  > .pull-start, > .pull-left {
+    margin-right: auto !important;
+  }
+  > .pull-end, > .pull-right {
+    margin-left: auto !important;
+  }
+}
+
+.#{$col} {
+  &[class*="align-"] {
+    &[class*="-right"] {
+      @extend %align-end;
+    }
+    &[class*="-center"] {
+      @extend %align-center;
+    }
+    &[class*="-left"] {
+      @extend %align-start;
+    }
+    &[class*="-bottom"] {
+      @extend %justify-end;
+    }
+    &[class*="-middle"] {
+      @extend %justify-center;
+    }
+    &[class*="-top"] {
+      @extend %justify-start;
+    }
+  }
+
+  > .pull-start, .pull-bottom {
+    margin-bottom: auto !important;
+  }
+  > .pull-end, .pull-top {
+    margin-top: auto !important;
   }
 }

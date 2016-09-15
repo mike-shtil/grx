@@ -6,11 +6,39 @@
 * http://mike-is.me
 * distributed under MIT license
 */
+.grx-row[class*="align-"][class*="-top"], .grx-col[class*="align-"][class*="-left"] {
+  -webkit-box-align: start;
+  -ms-grid-row-align: flex-start;
+  align-items: flex-start;
+  align-content: flex-start; }
+
+.grx-row.center, .grx-col.center, .grx-row[class*="align-"][class*="-middle"], .grx-col[class*="align-"][class*="-center"] {
+  -webkit-box-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  align-content: center; }
+
+.grx-row[class*="align-"][class*="-bottom"], .grx-col[class*="align-"][class*="-right"] {
+  -webkit-box-align: end;
+  -ms-grid-row-align: flex-end;
+  align-items: flex-end;
+  align-content: flex-end; }
+
+.grx-row[class*="align-"][class*="-left"], .grx-col[class*="align-"][class*="-top"] {
+  -webkit-box-pack: start;
+  justify-content: flex-start; }
+
+.grx-row.center, .grx-col.center, .grx-row[class*="align-"][class*="-center"], .grx-col[class*="align-"][class*="-middle"] {
+  -webkit-box-pack: center;
+  justify-content: center; }
+
+.grx-row[class*="align-"][class*="-right"], .grx-col[class*="align-"][class*="-bottom"] {
+  -webkit-box-pack: end;
+  justify-content: flex-end; }
+
 .grx-row, .grx-col {
   display: -webkit-box;
   display: flex;
-  -webkit-box-align: stretch;
-  align-items: stretch;
   box-sizing: border-box; }
   .grx-row.gutter-xs, .grx-col.gutter-xs {
     margin: -0.25rem; }
@@ -629,49 +657,17 @@
   -webkit-box-flex: 2;
   flex: 2 2 auto; }
 
-.grx-row.justify-start, .grx-col.justify-start {
-  -webkit-box-pack: start;
-  justify-content: flex-start; }
-
-.grx-row.justify-center, .grx-row.center, .grx-col.justify-center, .grx-col.center {
-  -webkit-box-pack: center;
-  justify-content: center; }
-
-.grx-row.justify-end, .grx-col.justify-end {
-  -webkit-box-pack: end;
-  justify-content: flex-end; }
-
-.grx-row.align-start, .grx-col.align-start {
-  -webkit-box-align: start;
-  -ms-grid-row-align: flex-start;
-  align-items: flex-start; }
-
-.grx-row.align-center, .grx-row.center, .grx-col.align-center, .grx-col.center {
-  -webkit-box-align: center;
-  -ms-grid-row-align: center;
-  align-items: center; }
-
-.grx-row.align-end, .grx-col.align-end {
-  -webkit-box-align: end;
-  -ms-grid-row-align: flex-end;
-  align-items: flex-end; }
-
-.grx-row.align-stretch, .grx-col.align-stretch {
-  -webkit-box-align: stretch;
-  -ms-grid-row-align: stretch;
-  align-items: stretch; }
-
 .grx-row.wrap, .grx-col.wrap {
   flex-wrap: wrap; }
 
-.grx-row > .pull-end, .grx-col > .pull-end {
-  margin-left: auto !important; }
-
-.grx-row > .pull-start, .grx-col > .pull-start {
+.grx-row > .pull-start, .grx-row > .pull-left {
   margin-right: auto !important; }
 
-.grx-col > .pull-end {
-  margin-top: auto !important; }
+.grx-row > .pull-end, .grx-row > .pull-right {
+  margin-left: auto !important; }
 
-.grx-col > .pull-start {
+.grx-col > .pull-start, .grx-col .pull-bottom {
   margin-bottom: auto !important; }
+
+.grx-col > .pull-end, .grx-col .pull-top {
+  margin-top: auto !important; }

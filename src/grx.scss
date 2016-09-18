@@ -101,10 +101,30 @@
       @extend %justify-center;
       @extend %align-center;
     }
+
+    //deprecated
+    &.align-start {
+      @extend %align-start;
+    }
+    &.align-center {
+      @extend %align-center;
+    }
+    &.align-end {
+      @extend %align-end;
+    }
+    &.justify-start {
+      @extend %justify-start;
+    }
+    &.justify-center {
+      @extend %justify-center;
+    }
+    &.justify-end {
+      @extend %justify-end;
+    }
 }
 
 .#{$row} {
-  &[class*="align-"] {
+  &[class*="#{$items}-"] {
     &[class*="-right"] {
       @extend %justify-end;
     }
@@ -134,7 +154,7 @@
 }
 
 .#{$col} {
-  &[class*="align-"] {
+  &[class*="#{$items}-"] {
     &[class*="-right"] {
       @extend %align-end;
     }

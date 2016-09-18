@@ -4,7 +4,8 @@
 
 $row: 'grx-row'; //prefix to use on flex containers
 $col: 'grx-col'; //prefix to use on vertical flex containers
-$size: size; //prefix to use on children of flex containers, when indicating size
+$size: 'size'; //prefix to use on children of flex containers, when indicating size
+$items: 'items'; //prefix to use on the combined align/justify command (e.g. items-top-right on a col or row)
 $bases: 1 2 3 4 5 6 8 9 10 12; //grid width fraction denominators to support
 $base_default: 12; //default grid base, used when no base is specified
 $gutters: ( xs: 0.5rem, sm: 1rem, md: 2rem, lg: 4rem, xl: 8rem ); //params - gutter - vertical and horizontal separating columns (should be >= 0)

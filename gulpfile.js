@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var package = require('./package.json');
 
 //default task
 gulp.task('default', ['dist', 'watch']);
@@ -21,6 +22,7 @@ gulp.task('dist', function() {
       .pipe($.autoprefixer({browsers: ['last 1 version', 'iOS 6'], cascade: false}))
       //.pipe($.sourcemaps.write({includeContent: false, sourceRoot: '.'}))
       .pipe($.clean())
+      .pipe($.replace('[version]', package.version))
       .pipe(gulp.dest('dist'))
       .pipe($.cssnano({discardDuplicates: false, discardComments: true, sourcemap: false}))
       .pipe($.rename({suffix: '.min'}))

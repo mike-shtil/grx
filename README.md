@@ -35,7 +35,7 @@ bower install grx
 
 ### children can have implicit/explicit sizes:
 ```html
-<div "grx-col">
+<div "grx-row">
   <div>
     <!-- no size specified; takes up amount of space required for the content space. -->
     <!-- if the logo is 128px wide, that's the div's width -->
@@ -55,6 +55,22 @@ bower install grx
     <!-- multiple 'auto' children will split share space equally -->
     <button>Submit</button>
   </div>
+</div>
+```
+### items can be aligned by using directions as you see them
+```html
+items-[direction1]-[optional:direction2]
+<!-- directions can be: top, middle (vertical), bottom, left, center (horizontal), right -->
+```
+```html
+<div class="grx-row items-right">
+  <div>I'm aligned to right</div>
+  <div>I'm also aligned to right</div>
+</div>
+```
+```html
+<div class="grx-row items-middle-right">
+  <div>I'm aligned to the right and also middle (vertically)</div>
 </div>
 ```
 

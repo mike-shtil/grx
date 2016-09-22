@@ -6,6 +6,22 @@
 * http://mike-is.me
 * distributed under MIT license
 */
+/*!
+* Grx - a lightweight layout grid
+* http://github.com/mike-shtil/grx
+*
+* by: Michael (Mike) Shtilerman
+* http://mike-is.me
+* distributed under MIT license
+*/
+/*!
+* Grx - a lightweight layout grid
+* http://github.com/mike-shtil/grx
+*
+* by: Michael (Mike) Shtilerman
+* http://mike-is.me
+* distributed under MIT license
+*/
 .grx-row, .grx-col {
   display: -webkit-box;
   display: flex;
@@ -13,25 +29,25 @@
   align-items: stretch;
   box-sizing: border-box; }
   .grx-row.gutter-xs, .grx-col.gutter-xs {
-    margin: -0.25rem; }
+    margin: -2.5px; }
     .grx-row.gutter-xs > *, .grx-col.gutter-xs > * {
-      padding: 0.25rem; }
+      padding: 2.5px; }
   .grx-row.gutter-sm, .grx-col.gutter-sm {
-    margin: -0.5rem; }
+    margin: -5px; }
     .grx-row.gutter-sm > *, .grx-col.gutter-sm > * {
-      padding: 0.5rem; }
+      padding: 5px; }
   .grx-row.gutter-md, .grx-col.gutter-md {
-    margin: -1rem; }
+    margin: -10px; }
     .grx-row.gutter-md > *, .grx-col.gutter-md > * {
-      padding: 1rem; }
+      padding: 10px; }
   .grx-row.gutter-lg, .grx-col.gutter-lg {
-    margin: -2rem; }
+    margin: -15px; }
     .grx-row.gutter-lg > *, .grx-col.gutter-lg > * {
-      padding: 2rem; }
+      padding: 15px; }
   .grx-row.gutter-xl, .grx-col.gutter-xl {
-    margin: -4rem; }
+    margin: -25px; }
     .grx-row.gutter-xl > *, .grx-col.gutter-xl > * {
-      padding: 4rem; }
+      padding: 25px; }
 
 .grx-col {
   -webkit-box-orient: vertical;

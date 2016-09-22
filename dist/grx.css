@@ -1,11 +1,13 @@
 /*!
 * Grx - a lightweight flexbox grid
+* v2.4.1
 * http://github.com/mike-shtil/grx
 *
 * by: Michael (Mike) Shtilerman
 * http://mike-is.me
 * distributed under MIT license
 */
+<<<<<<< HEAD
 /*!
 * Grx - a lightweight layout grid
 * http://github.com/mike-shtil/grx
@@ -22,11 +24,41 @@
 * http://mike-is.me
 * distributed under MIT license
 */
+=======
+.grx-row.align-start, .grx-col.align-start, .grx-row[class*="items-"][class*="-top"], .grx-col[class*="items-"][class*="-left"] {
+  -webkit-box-align: start;
+  -ms-grid-row-align: flex-start;
+  align-items: flex-start;
+  align-content: flex-start; }
+
+.grx-row.center, .grx-col.center, .grx-row.align-center, .grx-col.align-center, .grx-row[class*="items-"][class*="-middle"], .grx-col[class*="items-"][class*="-center"] {
+  -webkit-box-align: center;
+  -ms-grid-row-align: center;
+  align-items: center;
+  align-content: center; }
+
+.grx-row.align-end, .grx-col.align-end, .grx-row[class*="items-"][class*="-bottom"], .grx-col[class*="items-"][class*="-right"] {
+  -webkit-box-align: end;
+  -ms-grid-row-align: flex-end;
+  align-items: flex-end;
+  align-content: flex-end; }
+
+.grx-row.justify-start, .grx-col.justify-start, .grx-row[class*="items-"][class*="-left"], .grx-col[class*="items-"][class*="-top"] {
+  -webkit-box-pack: start;
+  justify-content: flex-start; }
+
+.grx-row.center, .grx-col.center, .grx-row.justify-center, .grx-col.justify-center, .grx-row[class*="items-"][class*="-center"], .grx-col[class*="items-"][class*="-middle"] {
+  -webkit-box-pack: center;
+  justify-content: center; }
+
+.grx-row.justify-end, .grx-col.justify-end, .grx-row[class*="items-"][class*="-right"], .grx-col[class*="items-"][class*="-bottom"] {
+  -webkit-box-pack: end;
+  justify-content: flex-end; }
+
+>>>>>>> origin/master
 .grx-row, .grx-col {
   display: -webkit-box;
   display: flex;
-  -webkit-box-align: stretch;
-  align-items: stretch;
   box-sizing: border-box; }
   .grx-row.gutter-xs, .grx-col.gutter-xs {
     margin: -2.5px; }
@@ -645,49 +677,17 @@
   -webkit-box-flex: 2;
   flex: 2 2 auto; }
 
-.grx-row.justify-start, .grx-col.justify-start {
-  -webkit-box-pack: start;
-  justify-content: flex-start; }
-
-.grx-row.justify-center, .grx-row.center, .grx-col.justify-center, .grx-col.center {
-  -webkit-box-pack: center;
-  justify-content: center; }
-
-.grx-row.justify-end, .grx-col.justify-end {
-  -webkit-box-pack: end;
-  justify-content: flex-end; }
-
-.grx-row.align-start, .grx-col.align-start {
-  -webkit-box-align: start;
-  -ms-grid-row-align: flex-start;
-  align-items: flex-start; }
-
-.grx-row.align-center, .grx-row.center, .grx-col.align-center, .grx-col.center {
-  -webkit-box-align: center;
-  -ms-grid-row-align: center;
-  align-items: center; }
-
-.grx-row.align-end, .grx-col.align-end {
-  -webkit-box-align: end;
-  -ms-grid-row-align: flex-end;
-  align-items: flex-end; }
-
-.grx-row.align-stretch, .grx-col.align-stretch {
-  -webkit-box-align: stretch;
-  -ms-grid-row-align: stretch;
-  align-items: stretch; }
-
 .grx-row.wrap, .grx-col.wrap {
   flex-wrap: wrap; }
 
-.grx-row > .pull-end, .grx-col > .pull-end {
-  margin-left: auto !important; }
-
-.grx-row > .pull-start, .grx-col > .pull-start {
+.grx-row > .pull-start, .grx-row > .pull-left {
   margin-right: auto !important; }
 
-.grx-col > .pull-end {
-  margin-top: auto !important; }
+.grx-row > .pull-end, .grx-row > .pull-right {
+  margin-left: auto !important; }
 
-.grx-col > .pull-start {
+.grx-col > .pull-start, .grx-col .pull-bottom {
   margin-bottom: auto !important; }
+
+.grx-col > .pull-end, .grx-col .pull-top {
+  margin-top: auto !important; }

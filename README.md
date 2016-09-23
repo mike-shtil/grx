@@ -3,19 +3,18 @@
 
 **Grx** allows you to implement scalable layouts in a dependable, declarative manner. The syntax is lightweight, relying on defaults as much as possible for easy rapid prototyping.
 
-##Demo page:
+#Demo
 http://mike-is.me/grx/
 
-## Installation:
+## Installation
 ```bash
 npm install grx
 ```
-or
 ```bash
 bower install grx
 ```
 
-## Use Example:
+## Use Examples
 ### grx-row align direct children horizontally. grx-col aligns direct children vertically.
 ```html
 <div "grx-row">
@@ -44,7 +43,7 @@ bower install grx
   <div class="size-4">
     <!-- one number - fraction out of 12; here, 4/12 or a third of the parent width -->
     <input type="text" placeholder="Search">
-    
+
   </div>
   <div class="size-2-5">
     <!-- two numbers are nominator/denominator; here, 2/5 of the parent width -->
@@ -60,7 +59,9 @@ bower install grx
 ### items can be aligned by using directions as you see them
 ```html
 items-[direction1]-[optional:direction2]
-<!-- directions can be: top, middle (vertical), bottom, left, center (horizontal), right -->
+<!-- directions can be: -->
+<!-- top, middle (vertical), bottom, -->
+<!-- left, center (horizontal), right -->
 ```
 ```html
 <div class="grx-row items-right">

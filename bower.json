@@ -3,7 +3,7 @@
   "authors": [
     "Michael (Mike) Shtilerman <mike.shtil@gmail.com>"
   ],
-  "version": "2.4.2",
+  "version": "2.4.3",
   "description": "Own your layout with a friendly flex-based grid",
   "main": "dist/grx.css",
   "moduleType": [

@@ -2,8 +2,7 @@
 //container children
 ////////////////////
 
-.#{$row},
-.#{$row} > * {
+.#{$row}, .#{$row} > * {
     // flex-grow: 0;
     // flex-shrink: 1;
     box-sizing: border-box;
@@ -11,7 +10,7 @@
 //default (null) breakpoint
 @media all and (min-width: 0) {
     //default base
-    .#{$row} {
+    .#{$col}, .#{$row} {
         @for $n from 1 through $base_default {
             > .#{$size}-#{$n} {
                 flex-basis: percentage($n / $base_default);
@@ -30,7 +29,7 @@
 //dynamic breakpoints
 @each $bpname, $bpvalue in $breakpoints {
      @media all and (min-width: #{$bpvalue}){
-        .#{$row} {
+        .#{$col}, .#{$row} {
             //default base
             @for $n from 1 through $base_default {
                 > .#{$size}-#{$bpname}-#{$n} {
@@ -52,8 +51,7 @@
 //general element
 /////////////////
 
-.#{$col},
-.#{$row} {
+.#{$col}, .#{$row} {
     display: flex;
     box-sizing: border-box;
     ////////
@@ -123,6 +121,14 @@
 
     &.justify-end {
         @extend %justify-end;
+    }
+
+    &[class*="-between"] {
+        justify-content: space-between;
+    }
+
+    &[class*="-around"] {
+        justify-content: space-around;
     }
 
     > .#{$size}-auto {

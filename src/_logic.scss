@@ -164,14 +164,26 @@
         }
     }
 
-     > .pull-left,
+    > .pull-left,
     > .pull-start {
         margin-right: auto !important;
     }
 
-     > .pull-right,
+    > .pull-right,
     > .pull-end {
         margin-left: auto !important;
+    }
+
+    > .align-top {
+      @extend %align-self-start;
+    }
+
+    > .align-middle {
+      @extend %align-self-center;
+    }
+
+    > .align-bottom {
+      @extend %align-self-end;
     }
 }
 
@@ -204,13 +216,25 @@
         }
     }
 
-    .pull-bottom,
+    > .pull-bottom,
     > .pull-start {
         margin-bottom: auto !important;
     }
 
-    .pull-top,
+    > .pull-top,
     > .pull-end {
         margin-top: auto !important;
+    }
+
+    > .align-left {
+      @extend %align-self-start;
+    }
+
+    > .align-center {
+      @extend %align-self-center;
+    }
+
+    > .align-right {
+      @extend %align-self-end;
     }
 }

@@ -57,29 +57,8 @@
     ////////
     //gutter
     ////////
-    &[class*="gutter-"] {
-        &:after,
-        &:before {
-            content: '';
-        }
-    }
     @each $name, $value in $gutters {
         &.gutter-#{$name} {
-            &:not(.wrap) {
-                overflow: hidden;
-
-                &:after,
-                &:before {
-                    //offset for gutter on external elements;
-                    margin-left: -$value/2;
-                }
-
-                > * {
-                    margin-right: $value/2;
-                    margin-left: $value/2;
-                }
-            }
-
             &.wrap {
                 margin: -$value/2;
 
@@ -87,6 +66,13 @@
                     padding: $value/2;
                 }
             }
+        }
+    }
+
+    &[class*="gutter-"] {
+        &:after,
+        &:before {
+            content: '';
         }
     }
 
@@ -138,6 +124,28 @@
 }
 
 .#{$row} {
+  ////////
+  //gutter
+  ////////
+    @each $name, $value in $gutters {
+        &.gutter-#{$name} {
+            &:not(.wrap) {
+                overflow: hidden;
+
+                &:after,
+                &:before {
+                    //offset for gutter on external elements;
+                    margin-left: -$value/2;
+                }
+
+                > * {
+                    margin-right: $value/2;
+                    margin-left: $value/2;
+                }
+            }
+        }
+    }
+
     &[class*="#{$items}-"] {
         &[class*="-right"] {
             @extend %justify-end;
@@ -189,6 +197,28 @@
 
 .#{$col} {
     flex-direction: column;
+
+    ////////
+    //gutter
+    ////////
+    @each $name, $value in $gutters {
+        &.gutter-#{$name} {
+            &:not(.wrap) {
+                overflow: hidden;
+
+                &:after,
+                &:before {
+                    //offset for gutter on external elements;
+                    margin-top: -$value/2;
+                }
+
+                > * {
+                    margin-top: $value/2;
+                    margin-bottom: $value/2;
+                }
+            }
+        }
+    }
 
     &[class*="#{$items}-"] {
         &[class*="-right"] {

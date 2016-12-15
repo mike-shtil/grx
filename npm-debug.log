@@ -1,0 +1,124 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.9
+3 info using node@v6.9.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'C:\\Users\\Mike\\Documents\\Dev\\grx',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory C:\Users\Mike\AppData\Roaming\npm-cache\grx\2.6.1\package.tgz not in flight; packing
+9 verbose correctMkdir C:\Users\Mike\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+10 info lifecycle grx@2.6.1~prepublish: grx@2.6.1
+11 silly lifecycle grx@2.6.1~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ 'C:\\Users\\Mike\\AppData\\Roaming\\npm-cache\\grx\\2.6.1\\package.tgz',
+12 verbose tar pack   'C:\\Users\\Mike\\Documents\\Dev\\grx' ]
+13 verbose tarball C:\Users\Mike\AppData\Roaming\npm-cache\grx\2.6.1\package.tgz
+14 verbose folder C:\Users\Mike\Documents\Dev\grx
+15 verbose addLocalTarball adding from inside cache C:\Users\Mike\AppData\Roaming\npm-cache\grx\2.6.1\package.tgz
+16 verbose correctMkdir C:\Users\Mike\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+17 silly cache afterAdd grx@2.6.1
+18 verbose afterAdd C:\Users\Mike\AppData\Roaming\npm-cache\grx\2.6.1\package\package.json not in flight; writing
+19 verbose correctMkdir C:\Users\Mike\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+20 verbose afterAdd C:\Users\Mike\AppData\Roaming\npm-cache\grx\2.6.1\package\package.json written
+21 silly publish { name: 'grx',
+21 silly publish   version: '2.6.1',
+21 silly publish   description: 'Own your layout with a friendly flexbox-based grid',
+21 silly publish   main: 'gulpfile.js',
+21 silly publish   dependencies: {},
+21 silly publish   devDependencies:
+21 silly publish    { gulp: '^3.9.1',
+21 silly publish      'gulp-autoprefixer': '^3.1.0',
+21 silly publish      'gulp-clean': '^0.3.2',
+21 silly publish      'gulp-cssnano': '^2.1.2',
+21 silly publish      'gulp-dest': '^0.2.3',
+21 silly publish      'gulp-gzip': '^1.4.0',
+21 silly publish      'gulp-load-plugins': '^1.2.4',
+21 silly publish      'gulp-plumber': '^1.1.0',
+21 silly publish      'gulp-rename': '^1.2.2',
+21 silly publish      'gulp-replace': '^0.5.4',
+21 silly publish      'gulp-sass': '^2.2.0',
+21 silly publish      'gulp-sourcemaps': '^1.6.0',
+21 silly publish      'gulp-watch': '^4.3.5' },
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/mike-shtil/grx.git' },
+21 silly publish   keywords: [ 'flex', 'flexbox', 'grid', 'css', 'layout' ],
+21 silly publish   author: { name: 'Mike', url: 'Michael' },
+21 silly publish   license: 'MIT',
+21 silly publish   bugs: { url: 'https://github.com/mike-shtil/grx/issues' },
+21 silly publish   homepage: 'https://github.com/mike-shtil/grx#readme',
+21 silly publish   readme: '# Grx\r\n## Grx is a layout grid powered by CSS3\'s flexbox model.\r\n\r\n**Grx** allows you to implement scalable layouts in a dependable, declarative manner. The syntax is lightweight, relying on defaults as much as possible for easy rapid prototyping.\r\n\r\n## Demo page:\r\nhttp://mike-is.me/grx/\r\n\r\n## Installation:\r\n```bash\r\nnpm install grx\r\n```\r\n```bash\r\nbower install grx\r\n```\r\n\r\n## Use Example:\r\n### grx-row align direct children horizontally. grx-col aligns direct children vertically.\r\n```html\r\n<div "grx-row">\r\n  <div>I\'m a child, showing alongside my siblings</div>\r\n  <div>I\'m another child, showing alongside my siblings</div>\r\n  <div>I\'m another child, showing alongside my siblings</div>\r\n</div>\r\n```\r\n### simple column. Children align one below another.\r\n```html\r\n<div "grx-col">\r\n  <div>I\'m a child, showing below/above my siblings</div>\r\n  <div>I\'m another child, showing below/above my siblings</div>\r\n  <div>I\'m another child, showing below/above my siblings</div>\r\n</div>\r\n```\r\n\r\n### children can have implicit/explicit sizes:\r\n```html\r\n<div "grx-row">\r\n  <div>\r\n    <!-- no size specified; takes up amount of space required for the content space. -->\r\n    <!-- if the logo is 128px wide, that\'s the div\'s width -->\r\n    <img src="logo.png"></img>\r\n  </div>\r\n  <div class="size-4">\r\n    <!-- one number - fraction out of 12; here, 4/12 or a third of the parent width -->\r\n    <input type="text" placeholder="Search">\r\n\r\n  </div>\r\n  <div class="size-2-5">\r\n    <!-- two numbers are nominator/denominator; here, 2/5 of the parent width -->\r\n    <button>Clear</button>\r\n  </div>\r\n  <div class="size-auto">\r\n    <!-- \'auto\' children will take up all the remaining free space in the parent -->\r\n    <!-- multiple \'auto\' children will split share space equally -->\r\n    <button>Submit</button>\r\n  </div>\r\n</div>\r\n```\r\n### items can be aligned by using directions as you see them\r\n```html\r\nitems-[direction1]-[optional:direction2]\r\n<!-- directions can be: top, middle (vertical), bottom, left, center (horizontal), right -->\r\n```\r\n```html\r\n<div class="grx-row items-right">\r\n  <div>I\'m aligned to right</div>\r\n  <div>I\'m also aligned to right</div>\r\n</div>\r\n```\r\n```html\r\n<div class="grx-row items-middle-right">\r\n  <div>I\'m aligned to the right and also middle (vertically)</div>\r\n</div>\r\n```\r\n\r\n## Author\r\nMichael (Mike) Shtilerman\r\n\r\n## License\r\nThis project is licensed under the MIT license. See the [LICENSE](LICENSE) file for more info.\r\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '9c4c7e5f6898b4dc5b338326e1552b0d84fb2ae4',
+21 silly publish   _id: 'grx@2.6.1',
+21 silly publish   _shasum: '731e760334479776bdc2a1901f5184fd5c7d3165',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name grx
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'grx',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'grx',
+26 silly mapToRegistry   name: 'grx',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/grx
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading C:\Users\Mike\AppData\Roaming\npm-cache\grx\2.6.1\package.tgz
+30 verbose request uri https://registry.npmjs.org/grx
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 3:50:41 PM
+33 verbose request using bearer token for auth
+34 verbose request id 8c3700ec968be762
+35 http request PUT https://registry.npmjs.org/grx
+36 http 403 https://registry.npmjs.org/grx
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Thu, 15 Dec 2016 13:50:43 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-fra1250-FRA',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1481809842.834118,VS0,VE1121',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating C:\Users\Mike\AppData\Roaming\npm-cache\registry.npmjs.org\grx on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 2.6.1." : grx
+40 verbose stack     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:290:14)
+40 verbose stack     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+40 verbose stack     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:187:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1048:10)
+40 verbose stack     at emitOne (events.js:96:13)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:969:12)
+41 verbose statusCode 403
+42 verbose pkgid grx
+43 verbose cwd C:\Users\Mike\Documents\Dev\grx
+44 error Windows_NT 10.0.14393
+45 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+46 error node v6.9.2
+47 error npm  v3.10.9
+48 error code E403
+49 error "You cannot publish over the previously published version 2.6.1." : grx
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]

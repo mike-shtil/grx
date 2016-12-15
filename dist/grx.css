@@ -1,6 +1,6 @@
 /*!
 * Grx - a lightweight flexbox grid
-* v2.6.0
+* v2.6.1
 * http://github.com/mike-shtil/grx
 *
 * by: Michael (Mike) Shtilerman
@@ -17,19 +17,16 @@
 */
 .grx-col.align-start, .grx-row.align-start, .grx-row[class*="items-"][class*="-top"], .grx-col[class*="items-"][class*="-left"] {
   -webkit-box-align: start;
-  -ms-grid-row-align: flex-start;
   align-items: flex-start;
   align-content: flex-start; }
 
 .grx-col.center, .grx-row.center, .grx-col.align-center, .grx-row.align-center, .grx-row[class*="items-"][class*="-middle"], .grx-col[class*="items-"][class*="-center"] {
   -webkit-box-align: center;
-  -ms-grid-row-align: center;
   align-items: center;
   align-content: center; }
 
 .grx-col.align-end, .grx-row.align-end, .grx-row[class*="items-"][class*="-bottom"], .grx-col[class*="items-"][class*="-right"] {
   -webkit-box-align: end;
-  -ms-grid-row-align: flex-end;
   align-items: flex-end;
   align-content: flex-end; }
 
@@ -49,6 +46,7 @@
   align-self: flex-start; }
 
 .grx-row > .align-middle, .grx-col > .align-center {
+  -ms-grid-row-align: center;
   align-self: center; }
 
 .grx-row > .align-bottom, .grx-col > .align-right {
@@ -645,63 +643,28 @@
   display: -webkit-box;
   display: flex;
   box-sizing: border-box; }
-  .grx-col[class*="gutter-"]:after, .grx-col[class*="gutter-"]:before, .grx-row[class*="gutter-"]:after, .grx-row[class*="gutter-"]:before {
-    content: ''; }
-  .grx-col.gutter-xs:not(.wrap), .grx-row.gutter-xs:not(.wrap) {
-    overflow: hidden; }
-    .grx-col.gutter-xs:not(.wrap):after, .grx-col.gutter-xs:not(.wrap):before, .grx-row.gutter-xs:not(.wrap):after, .grx-row.gutter-xs:not(.wrap):before {
-      margin-left: -2.5px; }
-    .grx-col.gutter-xs:not(.wrap) > *, .grx-row.gutter-xs:not(.wrap) > * {
-      margin-right: 2.5px;
-      margin-left: 2.5px; }
   .grx-col.gutter-xs.wrap, .grx-row.gutter-xs.wrap {
     margin: -2.5px; }
     .grx-col.gutter-xs.wrap > *, .grx-row.gutter-xs.wrap > * {
       padding: 2.5px; }
-  .grx-col.gutter-sm:not(.wrap), .grx-row.gutter-sm:not(.wrap) {
-    overflow: hidden; }
-    .grx-col.gutter-sm:not(.wrap):after, .grx-col.gutter-sm:not(.wrap):before, .grx-row.gutter-sm:not(.wrap):after, .grx-row.gutter-sm:not(.wrap):before {
-      margin-left: -5px; }
-    .grx-col.gutter-sm:not(.wrap) > *, .grx-row.gutter-sm:not(.wrap) > * {
-      margin-right: 5px;
-      margin-left: 5px; }
   .grx-col.gutter-sm.wrap, .grx-row.gutter-sm.wrap {
     margin: -5px; }
     .grx-col.gutter-sm.wrap > *, .grx-row.gutter-sm.wrap > * {
       padding: 5px; }
-  .grx-col.gutter-md:not(.wrap), .grx-row.gutter-md:not(.wrap) {
-    overflow: hidden; }
-    .grx-col.gutter-md:not(.wrap):after, .grx-col.gutter-md:not(.wrap):before, .grx-row.gutter-md:not(.wrap):after, .grx-row.gutter-md:not(.wrap):before {
-      margin-left: -10px; }
-    .grx-col.gutter-md:not(.wrap) > *, .grx-row.gutter-md:not(.wrap) > * {
-      margin-right: 10px;
-      margin-left: 10px; }
   .grx-col.gutter-md.wrap, .grx-row.gutter-md.wrap {
     margin: -10px; }
     .grx-col.gutter-md.wrap > *, .grx-row.gutter-md.wrap > * {
       padding: 10px; }
-  .grx-col.gutter-lg:not(.wrap), .grx-row.gutter-lg:not(.wrap) {
-    overflow: hidden; }
-    .grx-col.gutter-lg:not(.wrap):after, .grx-col.gutter-lg:not(.wrap):before, .grx-row.gutter-lg:not(.wrap):after, .grx-row.gutter-lg:not(.wrap):before {
-      margin-left: -15px; }
-    .grx-col.gutter-lg:not(.wrap) > *, .grx-row.gutter-lg:not(.wrap) > * {
-      margin-right: 15px;
-      margin-left: 15px; }
   .grx-col.gutter-lg.wrap, .grx-row.gutter-lg.wrap {
     margin: -15px; }
     .grx-col.gutter-lg.wrap > *, .grx-row.gutter-lg.wrap > * {
       padding: 15px; }
-  .grx-col.gutter-xl:not(.wrap), .grx-row.gutter-xl:not(.wrap) {
-    overflow: hidden; }
-    .grx-col.gutter-xl:not(.wrap):after, .grx-col.gutter-xl:not(.wrap):before, .grx-row.gutter-xl:not(.wrap):after, .grx-row.gutter-xl:not(.wrap):before {
-      margin-left: -25px; }
-    .grx-col.gutter-xl:not(.wrap) > *, .grx-row.gutter-xl:not(.wrap) > * {
-      margin-right: 25px;
-      margin-left: 25px; }
   .grx-col.gutter-xl.wrap, .grx-row.gutter-xl.wrap {
     margin: -25px; }
     .grx-col.gutter-xl.wrap > *, .grx-row.gutter-xl.wrap > * {
       padding: 25px; }
+  .grx-col[class*="gutter-"]:after, .grx-col[class*="gutter-"]:before, .grx-row[class*="gutter-"]:after, .grx-row[class*="gutter-"]:before {
+    content: ''; }
   .grx-col.wrap, .grx-row.wrap {
     flex-wrap: wrap; }
   .grx-col[class*="-between"], .grx-row[class*="-between"] {
@@ -712,6 +675,46 @@
   .grx-col > .size-auto, .grx-row > .size-auto {
     -webkit-box-flex: 2;
     flex: 2 2 auto; }
+
+.grx-row.gutter-xs:not(.wrap) {
+  overflow: hidden; }
+  .grx-row.gutter-xs:not(.wrap):after, .grx-row.gutter-xs:not(.wrap):before {
+    margin-left: -2.5px; }
+  .grx-row.gutter-xs:not(.wrap) > * {
+    margin-right: 2.5px;
+    margin-left: 2.5px; }
+
+.grx-row.gutter-sm:not(.wrap) {
+  overflow: hidden; }
+  .grx-row.gutter-sm:not(.wrap):after, .grx-row.gutter-sm:not(.wrap):before {
+    margin-left: -5px; }
+  .grx-row.gutter-sm:not(.wrap) > * {
+    margin-right: 5px;
+    margin-left: 5px; }
+
+.grx-row.gutter-md:not(.wrap) {
+  overflow: hidden; }
+  .grx-row.gutter-md:not(.wrap):after, .grx-row.gutter-md:not(.wrap):before {
+    margin-left: -10px; }
+  .grx-row.gutter-md:not(.wrap) > * {
+    margin-right: 10px;
+    margin-left: 10px; }
+
+.grx-row.gutter-lg:not(.wrap) {
+  overflow: hidden; }
+  .grx-row.gutter-lg:not(.wrap):after, .grx-row.gutter-lg:not(.wrap):before {
+    margin-left: -15px; }
+  .grx-row.gutter-lg:not(.wrap) > * {
+    margin-right: 15px;
+    margin-left: 15px; }
+
+.grx-row.gutter-xl:not(.wrap) {
+  overflow: hidden; }
+  .grx-row.gutter-xl:not(.wrap):after, .grx-row.gutter-xl:not(.wrap):before {
+    margin-left: -25px; }
+  .grx-row.gutter-xl:not(.wrap) > * {
+    margin-right: 25px;
+    margin-left: 25px; }
 
 .grx-row > .pull-left,
 .grx-row > .pull-start {
@@ -725,6 +728,41 @@
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   flex-direction: column; }
+  .grx-col.gutter-xs:not(.wrap) {
+    overflow: hidden; }
+    .grx-col.gutter-xs:not(.wrap):after, .grx-col.gutter-xs:not(.wrap):before {
+      margin-top: -2.5px; }
+    .grx-col.gutter-xs:not(.wrap) > * {
+      margin-top: 2.5px;
+      margin-bottom: 2.5px; }
+  .grx-col.gutter-sm:not(.wrap) {
+    overflow: hidden; }
+    .grx-col.gutter-sm:not(.wrap):after, .grx-col.gutter-sm:not(.wrap):before {
+      margin-top: -5px; }
+    .grx-col.gutter-sm:not(.wrap) > * {
+      margin-top: 5px;
+      margin-bottom: 5px; }
+  .grx-col.gutter-md:not(.wrap) {
+    overflow: hidden; }
+    .grx-col.gutter-md:not(.wrap):after, .grx-col.gutter-md:not(.wrap):before {
+      margin-top: -10px; }
+    .grx-col.gutter-md:not(.wrap) > * {
+      margin-top: 10px;
+      margin-bottom: 10px; }
+  .grx-col.gutter-lg:not(.wrap) {
+    overflow: hidden; }
+    .grx-col.gutter-lg:not(.wrap):after, .grx-col.gutter-lg:not(.wrap):before {
+      margin-top: -15px; }
+    .grx-col.gutter-lg:not(.wrap) > * {
+      margin-top: 15px;
+      margin-bottom: 15px; }
+  .grx-col.gutter-xl:not(.wrap) {
+    overflow: hidden; }
+    .grx-col.gutter-xl:not(.wrap):after, .grx-col.gutter-xl:not(.wrap):before {
+      margin-top: -25px; }
+    .grx-col.gutter-xl:not(.wrap) > * {
+      margin-top: 25px;
+      margin-bottom: 25px; }
   .grx-col > .pull-bottom,
   .grx-col > .pull-start {
     margin-bottom: auto !important; }

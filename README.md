@@ -17,7 +17,7 @@ bower install grx
 ## Use Example:
 ### grx-row align direct children horizontally. grx-col aligns direct children vertically.
 ```html
-<div "grx-row">
+<div class="grx-row">
   <div>I'm a child, showing alongside my siblings</div>
   <div>I'm another child, showing alongside my siblings</div>
   <div>I'm another child, showing alongside my siblings</div>
@@ -25,7 +25,7 @@ bower install grx
 ```
 ### simple column. Children align one below another.
 ```html
-<div "grx-col">
+<div class="grx-col">
   <div>I'm a child, showing below/above my siblings</div>
   <div>I'm another child, showing below/above my siblings</div>
   <div>I'm another child, showing below/above my siblings</div>
@@ -34,7 +34,7 @@ bower install grx
 
 ### children can have implicit/explicit sizes:
 ```html
-<div "grx-row">
+<div class="grx-row">
   <div>
     <!-- no size specified; takes up amount of space required for the content space. -->
     <!-- if the logo is 128px wide, that's the div's width -->

@@ -1,6 +1,6 @@
 /*!
 * Grx - a lightweight flexbox grid
-* v2.6.2
+* v2.7.0
 * http://github.com/mike-shtil/grx
 *
 * by: Michael (Mike) Shtilerman
@@ -24,6 +24,10 @@
   -webkit-box-align: center;
   align-items: center;
   align-content: center; }
+
+.grx-row[class*="items-"][class*="-baseline"] {
+  -webkit-box-align: baseline;
+  align-items: baseline; }
 
 .grx-col.align-end, .grx-row.align-end, .grx-row[class*="items-"][class*="-bottom"], .grx-col[class*="items-"][class*="-right"] {
   -webkit-box-align: end;

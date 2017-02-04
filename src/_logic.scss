@@ -167,6 +167,10 @@
             @extend %align-center;
         }
 
+        &[class*="-baseline"] {
+            @extend %align-baseline;
+        }
+
         &[class*="-top"] {
             @extend %align-start;
         }

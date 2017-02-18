@@ -13,14 +13,14 @@
     .#{$col}, .#{$row} {
         @for $n from 1 through $base_default {
             > .#{$size}-#{$n} {
-                flex-basis: percentage($n / $base_default);
+                width: percentage($n / $base_default);
             }
         }
         //dynamic bases
         @each $base in $bases {
              @for $n from 1 through $base{
                 > .#{$size}-#{$n}-#{$base} {
-                    flex-basis: percentage($n / $base);
+                    width: percentage($n / $base);
                 }
             }
         }
@@ -33,14 +33,14 @@
             //default base
             @for $n from 1 through $base_default {
                 > .#{$size}-#{$bpname}-#{$n} {
-                    flex-basis: percentage($n / $base_default);
+                    width: percentage($n / $base_default);
                 }
             }
             //dynamic bases
             @each $base in $bases {
                  @for $n from 1 through $base{
                     > .#{$size}-#{$bpname}-#{$n}-#{$base} {
-                        flex-basis: percentage($n / $base);
+                        width: percentage($n / $base);
                     }
                 }
             }

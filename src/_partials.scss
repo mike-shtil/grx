@@ -2,39 +2,39 @@
 //placeholders
 //////////////
 
-%align-start {
+%grx-align-start {
   align-items: flex-start;
   align-content: flex-start;
 }
-%align-center {
+%grx-align-center {
   align-items: center;
   align-content: center;
 }
-%align-baseline {
+%grx-align-baseline {
   align-items: baseline;
 }
-%align-end {
+%grx-align-end {
   align-items: flex-end;
   align-content: flex-end;
 }
-%justify-start {
+%grx-justify-start {
   justify-content: flex-start;
 }
-%justify-center {
+%grx-justify-center {
   justify-content: center;
 }
-%justify-end {
+%grx-justify-end {
   justify-content: flex-end;
 }
 
-%align-self-start {
+%grx-align-self-start {
   align-self: flex-start;
 }
 
-%align-self-center {
+%grx-align-self-center {
   align-self: center;
 }
 
-%align-self-end {
+%grx-align-self-end {
   align-self: flex-end;
 }

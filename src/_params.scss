@@ -2,11 +2,11 @@
 //params
 ////////
 
-$row: 'grx-row'; //prefix to use on flex containers
-$col: 'grx-col'; //prefix to use on vertical flex containers
-$size: 'size'; //prefix to use on children of flex containers, when indicating size
-$items: 'items'; //prefix to use on the combined align/justify command (e.g. items-top-right on a col or row)
-$bases: 1 2 3 4 5 6 8 9 10 12; //grid width fraction denominators to support
-$base_default: 12; //default grid base, used when no base is specified
-$gutters: ( xs: 5px, sm: 10px, md: 20px, lg: 30px, xl: 50px ); //params - gutter - vertical and horizontal separating columns (should be >= 0)
-$breakpoints: ( sm: 768px, md: 992px, lg: 1200px ); //breakpoints for media queries - mobile first
+$grx-row: 'grx-row'; //prefix to use on flex containers
+$grx-col: 'grx-col'; //prefix to use on vertical flex containers
+$grx-size: 'size'; //prefix to use on children of flex containers, when indicating size
+$grx-items: 'items'; //prefix to use on the combined align/justify command (e.g. items-top-right on a col or row)
+$grx-bases: 1 2 3 4 5 6 8 9 10 12; //grid width fraction denominators to support
+$grx-base_default: 12; //default grid base, used when no base is specified
+$grx-gutters: ( xs: 5px, sm: 10px, md: 20px, lg: 30px, xl: 50px ); //params - gutter - vertical and horizontal separating columns (should be >= 0)
+$grx-breakpoints: ( sm: 768px, md: 992px, lg: 1200px ); //breakpoints for media queries - mobile first

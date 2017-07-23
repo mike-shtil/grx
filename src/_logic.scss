@@ -2,7 +2,7 @@
 //container children
 ////////////////////
 
-.#{$row}, .#{$row} > * {
+.#{$grx-row}, .#{$grx-row} > * {
     // flex-grow: 0;
     // flex-shrink: 1;
     box-sizing: border-box;
@@ -10,16 +10,16 @@
 //default (null) breakpoint
 @media all and (min-width: 0) {
     //default base
-    .#{$col}, .#{$row} {
-        @for $n from 1 through $base_default {
-            > .#{$size}-#{$n} {
-                width: percentage($n / $base_default);
+    .#{$grx-col}, .#{$grx-row} {
+        @for $n from 1 through $grx-base_default {
+            > .#{$grx-size}-#{$n} {
+                width: percentage($n / $grx-base_default);
             }
         }
         //dynamic bases
-        @each $base in $bases {
+        @each $base in $grx-bases {
              @for $n from 1 through $base{
-                > .#{$size}-#{$n}-#{$base} {
+                > .#{$grx-size}-#{$n}-#{$base} {
                     width: percentage($n / $base);
                 }
             }
@@ -27,19 +27,19 @@
     }
 }
 //dynamic breakpoints
-@each $bpname, $bpvalue in $breakpoints {
+@each $bpname, $bpvalue in $grx-breakpoints {
      @media all and (min-width: #{$bpvalue}){
-        .#{$col}, .#{$row} {
+        .#{$grx-col}, .#{$grx-row} {
             //default base
-            @for $n from 1 through $base_default {
-                > .#{$size}-#{$bpname}-#{$n} {
-                    width: percentage($n / $base_default);
+            @for $n from 1 through $grx-base_default {
+                > .#{$grx-size}-#{$bpname}-#{$n} {
+                    width: percentage($n / $grx-base_default);
                 }
             }
             //dynamic bases
-            @each $base in $bases {
+            @each $base in $grx-bases {
                  @for $n from 1 through $base{
-                    > .#{$size}-#{$bpname}-#{$n}-#{$base} {
+                    > .#{$grx-size}-#{$bpname}-#{$n}-#{$base} {
                         width: percentage($n / $base);
                     }
                 }
@@ -51,13 +51,13 @@
 //general element
 /////////////////
 
-.#{$col}, .#{$row} {
+.#{$grx-col}, .#{$grx-row} {
     display: flex;
     box-sizing: border-box;
     ////////
     //gutter
     ////////
-    @each $name, $value in $gutters {
+    @each $name, $value in $grx-gutters {
         &.gutter-#{$name} {
             &.wrap {
                 margin: -$value/2;
@@ -81,32 +81,32 @@
     }
 
     &.center {
-        @extend %justify-center;
-        @extend %align-center;
+        @extend %grx-justify-center;
+        @extend %grx-align-center;
     }
     //deprecated
     &.align-start {
-        @extend %align-start;
+        @extend %grx-align-start;
     }
 
     &.align-center {
-        @extend %align-center;
+        @extend %grx-align-center;
     }
 
     &.align-end {
-        @extend %align-end;
+        @extend %grx-align-end;
     }
 
     &.justify-start {
-        @extend %justify-start;
+        @extend %grx-justify-start;
     }
 
     &.justify-center {
-        @extend %justify-center;
+        @extend %grx-justify-center;
     }
 
     &.justify-end {
-        @extend %justify-end;
+        @extend %grx-justify-end;
     }
 
     &[class*="-between"] {
@@ -117,17 +117,17 @@
         justify-content: space-around;
     }
 
-    > .#{$size}-auto {
+    > .#{$grx-size}-auto {
         //column which takes up entire remaining free space (width) in the row
         flex: 2 2 auto;
     }
 }
 
-.#{$row} {
+.#{$grx-row} {
   ////////
   //gutter
   ////////
-    @each $name, $value in $gutters {
+    @each $name, $value in $grx-gutters {
         &.gutter-#{$name} {
             &:not(.wrap) {
                 overflow: hidden;
@@ -146,33 +146,33 @@
         }
     }
 
-    &[class*="#{$items}-"] {
+    &[class*="#{$grx-items}-"] {
         &[class*="-right"] {
-            @extend %justify-end;
+            @extend %grx-justify-end;
         }
 
         &[class*="-center"] {
-            @extend %justify-center;
+            @extend %grx-justify-center;
         }
 
         &[class*="-left"] {
-            @extend %justify-start;
+            @extend %grx-justify-start;
         }
 
         &[class*="-bottom"] {
-            @extend %align-end;
+            @extend %grx-align-end;
         }
 
         &[class*="-middle"] {
-            @extend %align-center;
+            @extend %grx-align-center;
         }
 
         &[class*="-baseline"] {
-            @extend %align-baseline;
+            @extend %grx-align-baseline;
         }
 
         &[class*="-top"] {
-            @extend %align-start;
+            @extend %grx-align-start;
         }
     }
 
@@ -187,25 +187,25 @@
     }
 
     > .align-top {
-      @extend %align-self-start;
+      @extend %grx-align-self-start;
     }
 
     > .align-middle {
-      @extend %align-self-center;
+      @extend %grx-align-self-center;
     }
 
     > .align-bottom {
-      @extend %align-self-end;
+      @extend %grx-align-self-end;
     }
 }
 
-.#{$col} {
+.#{$grx-col} {
     flex-direction: column;
 
     ////////
     //gutter
     ////////
-    @each $name, $value in $gutters {
+    @each $name, $value in $grx-gutters {
         &.gutter-#{$name} {
             &:not(.wrap) {
                 overflow: hidden;
@@ -224,29 +224,29 @@
         }
     }
 
-    &[class*="#{$items}-"] {
+    &[class*="#{$grx-items}-"] {
         &[class*="-right"] {
-            @extend %align-end;
+            @extend %grx-align-end;
         }
 
         &[class*="-center"] {
-            @extend %align-center;
+            @extend %grx-align-center;
         }
 
         &[class*="-left"] {
-            @extend %align-start;
+            @extend %grx-align-start;
         }
 
         &[class*="-bottom"] {
-            @extend %justify-end;
+            @extend %grx-justify-end;
         }
 
         &[class*="-middle"] {
-            @extend %justify-center;
+            @extend %grx-justify-center;
         }
 
         &[class*="-top"] {
-            @extend %justify-start;
+            @extend %grx-justify-start;
         }
     }
 
@@ -261,14 +261,14 @@
     }
 
     > .align-left {
-      @extend %align-self-start;
+      @extend %grx-align-self-start;
     }
 
     > .align-center {
-      @extend %align-self-center;
+      @extend %grx-align-self-center;
     }
 
     > .align-right {
-      @extend %align-self-end;
+      @extend %grx-align-self-end;
     }
 }

@@ -3,8 +3,6 @@
 ////////////////////
 
 .#{$grx-row}, .#{$grx-row} > * {
-    // flex-grow: 0;
-    // flex-shrink: 1;
     box-sizing: border-box;
 }
 //default (null) breakpoint
@@ -54,6 +52,9 @@
 .#{$grx-col}, .#{$grx-row} {
     display: flex;
     box-sizing: border-box;
+    // min-height: 0 addresses inconsistency/issue with nested flex children having percentage height in FF/Chrome
+    // see https://bugs.chromium.org/p/chromium/issues/detail?id=927066
+    min-height: 0;
     ////////
     //gutter
     ////////

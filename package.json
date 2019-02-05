@@ -1,6 +1,6 @@
 {
   "name": "grx",
-  "version": "2.8.1",
+  "version": "2.9.0",
   "description": "Own your layout with a friendly flexbox-based grid",
   "main": "gulpfile.js",
   "dependencies": {},
@@ -15,12 +15,15 @@
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
-    "gulp-sass": "^2.2.0",
+    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-watch": "^4.3.5"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No tests yet\" && exit 1"
   },
   "repository": {
     "type": "git",

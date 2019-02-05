@@ -1,6 +1,6 @@
 /*!
 * Grx - a lightweight flexbox grid
-* v2.8.1
+* v2.9.0
 * http://github.com/mike-shtil/grx
 *
 * by: Michael (Mike) Shtilerman
@@ -638,7 +638,8 @@
 .grx-col, .grx-row {
   display: -webkit-box;
   display: flex;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  min-height: 0; }
   .grx-col.gutter-xs.wrap, .grx-row.gutter-xs.wrap {
     margin: -2.5px; }
     .grx-col.gutter-xs.wrap > *, .grx-row.gutter-xs.wrap > * {
